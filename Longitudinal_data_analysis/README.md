@@ -1,7 +1,7 @@
 # Longitudinal data analysis
 
-Repository with the material corresponding to the course _Dades Longitudinals: Temes Avançats en Ciències de la Salut_ given at
-[_Grau d'Estadística Aplicada_](http://www.uab.cat/web/estudiar/llistat-de-graus/informacio-general/x-1216708251447.html?param1=1264404714557). 
+Repository with the material corresponding to the course __Dades Longitudinals: Temes AvanÃ§ats en CiÃ¨ncies de la Salut__ given at
+[__Grau d'EstadÃ­stica Aplicada__](http://www.uab.cat/web/estudiar/llistat-de-graus/informacio-general/x-1216708251447.html?param1=1264404714557). 
 Each forlder contains slides, R code, data and exercises of each topic.
 
 
