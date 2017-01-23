@@ -186,7 +186,7 @@ _Bioconductor_ classes and methods -- "S4"
 
    ![Alt Ecosystem](figures/ecosystem.png)
 
-# High-Throughput Sequence Data
+# Handling Omic Data
 
 ## ExpressionSet
 
