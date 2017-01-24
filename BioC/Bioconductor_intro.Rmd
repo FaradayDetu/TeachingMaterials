@@ -1,6 +1,6 @@
 ---
 title: "Introduction to _Bioconductor_"
-author: Juan R Gonzalez <juanr.gonzalez@isglobal.org> (material based on Martin Morgan's courses)
+author: Juan R Gonzalez <juanr.gonzalez@isglobal.org> (part of this material is based on Martin Morgan's courses)
 date: "January, 2017"
 output:
   BiocStyle::html_document:
@@ -188,6 +188,39 @@ _Bioconductor_ classes and methods -- "S4"
 
 # Handling Omic Data
 
+## SNP array data
+
+[snpStats][] (former [snpMatrix][])
+
+SNP array data are normally stored in [PLINK] [] format (or [VCF] [] for NGS data). PLINK data are normally stored in three files .ped, .bim, .fam. The advantage is that SNP data are stored in binary format in the BED file (Homozygous normal 01, Heterozygous 02, Homozygous variant 03, missing 00). 
+
+- FAM  filele:  one row per individual - identification information: Family ID, Individual ID
+Paternal ID, Maternal ID, Sex (1=male; 2=female; other=unknown), Phenotype.
+- BIM file:  one row per SNP (rs id, chromosome, position, allele 1, allele 2).
+- BED  file:  one row per individual. Genotypes in columns.
+
+Data are easily loaded into R by using `read.plink` function
+
+```{r, read_plink}
+suppressMessages(library(snpStats))
+snps <- read.plink("data/obesity") # there are three files obesity.fam, obesity.bim, obesity.bed
+names(snps)
+```
+
+Genotypes is a `snpMatrix` object
+
+```{r, genotypes}
+geno <- snps$genotypes
+geno
+```
+
+Annotation is a `data.frame` object
+
+```{r, annotation}
+annotation <- snps$map
+head(annotation)
+```
+
 ## ExpressionSet
 
 [ExpressionSet][]
@@ -282,6 +315,21 @@ setdiff(range(gr), gr)                  # 'introns'
 
 
 
+## MultiDataSet
+
+[MultiDataSet][]
+
+   ![Alt MultiDataSet](figures/mds.svg)
+
+- Designed to encapsulate different types of datasets (including all classes in Bioconductor)
+- It properly deals with non-complete cases situations
+- Subsetting is easily performed in both: samples and features (using GenomicRanges)
+- It allows to:
+-- perform integration analysis with third party packages; 
+-- create new methods and functions for omic data integration; 
+-- encapsule new unimplemented data from any biological experiment.
+
+
 [Bioconductor]: https://bioconductor.org
 [CRAN]: https://cran.r-project.org
 [biocViews]: https://bioconductor.org/packages/
@@ -338,3 +386,7 @@ setdiff(range(gr), gr)                  # 'introns'
 [data.table]: https://cran.r-project.org/package=data.table
 [Rcpp]: https://cran.r-project.org/package=Rcpp
 [kallisto]: https://pachterlab.github.io/kallisto
+
+[MultiDataSet]: https://bioconductor.org/packages/MultiDataSet
+[snpMatrix]: http://www.bioconductor.org/packages//2.7/bioc/html/snpMatrix.html
+[PLINK]: http://pngu.mgh.harvard.edu/~purcell/plink/
