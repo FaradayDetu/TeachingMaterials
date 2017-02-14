@@ -1,0 +1,75 @@
+---
+title: "Sweave/Knitr for reproducible research with LaTeX"
+author: "Juan R Gonzalez"
+
+output:
+  BiocStyle::pdf_document:
+    toc_depth: 2
+  BiocStyle::html_document:
+    toc_depth: 2
+---
+
+<!-- to compile this:
+library("rmarkdown");
+render("rr-auhtoring.Rmd", output_format="all")
+or just call make
+-->
+
+```{r style, echo=FALSE, message=FALSE, warning=FALSE, results="asis"}
+library("knitr")
+#options(width=100)
+opts_chunk$set(message = FALSE, error = TRUE, warning = TRUE)
+```
+
+
+
+
+# Reproducible research (RR)
+
+- In it's most general sense... the ability to reproduce results from an experiment or analysis conducted by another.
+
+- From Wikipedia... `The ultimate product is the **paper along with the full computational environment** used to produce the results in the paper such as the code, data, etc. that can be **used to reproduce the results and create new work** based on the research
+
+- Concept is strongly based on the idea of **literate programming** such that the logic of the analysis is clearly represented in the final product by combining computer code/programs with ordinary human language [Knuth, 1992].
+
+## Example of non-reproducible research
+1. Gather data
+ - Begins with general question or research objectives
+ - Data collected in raw format (hard copy) converted to digital (Excel spreadsheet)
+2. Analyze data
+ - Import data into stats program or analyze directly in Excel
+ - Create figures/tables directly in stats program
+ -  Save relevant output
+3. Report Result
+ - Create research report using Word or other software
+ - Manually insert results into report
+ - Change final report by hand if methods/analysis altered
+
+## Example of reproducible research
+1. Gather data
+ - Begins with general question or research objectives
+ - Data collected in raw format (hard copy) converted to digital **text file**
+2. Analyze data 
+ - Create **integrated script** for importing data (data path is known)
+ - Create figures/tables directly in stats program
+ - **No need to export** (reproduced on the fly)
+3. Report Result
+ - Create research report using RR software
+ - **Automatically include results** into report
+ - **Change final report automatically** if methods/analysis altered
+
+Easily adopted using [RStudio](http://www.rstudio.com/). Also possible with [Tinn-R](https://sourceforge.net/projects/tinn-r/) or via command prompt but not as intuitive.
+Requires a LaTeX distribution system - use [MikTex for Windows](http://miktex.org/). It is essentially a
+LaTeX document that incorporates R code and these programs use Sweave (or Knitr) to convert .Rnw file 
+to .tex file, then LaTeX is used to create pdf files. Sweave comes with `utils` package, Knitr should be 
+loaded. 
+
+# References
+
+# Session information
+
+```{r, echo=FALSE}
+sessionInfo()
+```
+
+ 
