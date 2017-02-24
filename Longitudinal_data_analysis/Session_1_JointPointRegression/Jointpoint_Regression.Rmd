@@ -1,11 +1,10 @@
 ---
 title: "Joinpoint regression with `R`"
 author: "Juan R Gonzalez"
-
 output:
-  BiocStyle::pdf_document:
-    toc_depth: 2
   BiocStyle::html_document:
+    toc_depth: 2
+  BiocStyle::pdf_document:
     toc_depth: 2
 ---
 
