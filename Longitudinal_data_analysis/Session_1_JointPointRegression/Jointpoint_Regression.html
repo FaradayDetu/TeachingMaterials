@@ -262,7 +262,7 @@ lines(kcm$Year, rate.pred, lwd=2, lty=2, col=&quot;red&quot;)</code></pre>
 <pre class="r"><code> ljrjk(1, 2, kcm$Count, kcm$Population, kcm$Year+.5, 
              R=1000,alpha=.05)</code></pre>
 <pre><code>## Testing H0:  1  joinpoint(s) vs. H1:  2  joinpoints
-## p-value= 0.037 
+## p-value= 0.046 
 ## Null hypothesis is rejected
 ## 
 ## Model:
@@ -291,7 +291,7 @@ lines(kcm$Year, rate.pred, lwd=2, lty=2, col=&quot;red&quot;)</code></pre>
 ## [1] -0.1125223
 ## 
 ## $pval
-## [1] 0.037</code></pre>
+## [1] 0.046</code></pre>
 <p>Here we can conclude that</p>
 <p>Once the model is selected, we can compute the anual percentage of change of each segment by</p>
 <pre class="r"><code>mod &lt;- ljrk(2, kcm$Count, kcm$Population, kcm$Year+.5)</code></pre>
@@ -322,11 +322,11 @@ lines(kcm$Year, rate.pred, lwd=2, lty=2, col=&quot;red&quot;)</code></pre>
 <pre class="r"><code>ljrb(K=3, R=10000, kcm$Count, kcm$Population, kcm$Year+.5) </code></pre>
 <pre><code>## Backward algorithm for determining the number of joinpoints:
 ## Step  1 : Test H0: 0  joinpoint(s) vs H1: 3  joinpoint(s)
-## p-value=  0.0258 
+## p-value=  0.0257 
 ## Step  2 : Test H0: 0  joinpoint(s) vs H1: 2  joinpoint(s)
-## p-value=  0.0145 
+## p-value=  0.0134 
 ## Step  3 : Test H0: 1  joinpoint(s) vs H1: 2  joinpoint(s)
-## p-value=  0.0416 
+## p-value=  0.0428 
 ## 
 ##  Estimated number of joinpoints=  1 
 ## 
@@ -354,15 +354,15 @@ lines(kcm$Year, rate.pred, lwd=2, lty=2, col=&quot;red&quot;)</code></pre>
 ## [1] -0.112523
 ## 
 ## $pvals
-## [1] 0.0258 0.0145 0.0416</code></pre>
-<pre class="r"><code>ljrf(kcm$Count, kcm$Population, kcm$Year+.5, R=10020)</code></pre>
+## [1] 0.0257 0.0134 0.0428</code></pre>
+<pre class="r"><code>ljrf(kcm$Count, kcm$Population, kcm$Year+.5, R=10000)</code></pre>
 <pre><code>## Forward algorithm for determining the number of joinpoints:
 ## Step  1 : Test H0: 0  joinpoint(s) vs H1: 1  joinpoint(s)
-## p-value=  0.04091816 
+## p-value=  0.0397 
 ## Step  2 : Test H0: 1  joinpoint(s) vs H1: 2  joinpoint(s)
-## p-value=  0.04071856 
+## p-value=  0.0405 
 ## Step  3 : Test H0: 2  joinpoint(s) vs H1: 3  joinpoint(s)
-## p-value=  0.7203593 
+## p-value=  0.7262 
 ## 
 ##  Estimated number of joinpoints=  2 
 ## 
@@ -392,24 +392,25 @@ lines(kcm$Year, rate.pred, lwd=2, lty=2, col=&quot;red&quot;)</code></pre>
 ## [1] -0.1125223
 ## 
 ## $pvals
-## [1] 0.04091816 0.04071856 0.72035928 0.00000000 0.00000000</code></pre>
+## [1] 0.0397 0.0405 0.7262 0.0000 0.0000</code></pre>
 </div>
 </div>
 <div id="exercise-to-deliver" class="section level1">
 <h1><span class="header-section-number">5</span> Exercise (to deliver)</h1>
 <hr />
-<p><strong>Exercise 1:</strong> The file <code>mamaCat.txt</code> (available at <a href="https://github.com/isglobal-brge/TeachingMaterials/tree/master/Longitudinal_data_analysis/data" class="uri">https://github.com/isglobal-brge/TeachingMaterials/tree/master/Longitudinal_data_analysis/data</a>) contains data about breast cancer mortality in women between 35 and 65 years old in Catalonia. Rates correspond to the period 1975-1997. Each column contains the next variables: year of mortality, number of deaths and at-risk population. Perform next tasks:</p>
+<p>Data for exercises are in the repository <a href="https://github.com/isglobal-brge/TeachingMaterials/tree/master/Longitudinal_data_analysis/data" class="uri">https://github.com/isglobal-brge/TeachingMaterials/tree/master/Longitudinal_data_analysis/data</a></p>
+<p><strong>Exercise 1:</strong> The file <code>mamaCat.txt</code> contains data about breast cancer mortality in women between 35 and 65 years old in Catalonia. Rates correspond to the period 1975-1997. Each column contains the next variables: year of mortality, number of deaths and at-risk population. Perform next tasks:</p>
 <ul>
-<li>Create a plot to visualize temporal tren</li>
-<li>Estimate a Poisson model (or another one that controls for overdispersion if exists) and estimate the percentage of annyal change in the mortality rates.</li>
-<li>Visualy detect how many changes of trens (e.g. joinpoints) whold fit the data</li>
-<li>Perform a test to determine whether the selected model is better than the one considering a single trend</li>
+<li>Create a plot to visualize the temporal trend</li>
+<li>Estimate a Poisson model (or another model that could control for overdispersion - if exists) and estimate the annual percentage change (APC) of the mortality rates.</li>
+<li>Visualy detect how many changes in rate trend (e.g. joinpoints) would fit the data</li>
+<li>Perform a test to determine whether this model having joinpoints is better than the one considering a single trend</li>
 <li>Use an automatic method to analize these data and determine how many joinpoints are neccesaries to model the temporal trend</li>
 <li>In case of having several trend changes, estimate the APC of each segment</li>
 </ul>
-<p><strong>Exeercise 2</strong> The file <code>pulmonCat.txt</code> (also available in the same repository) contains data about lung cancer mortality in males and females in Catalonia of the period 1975-1997. Each column contains the next variables: gender, year of mortality, number of deaths and at-risk population. Perform next tasks:</p>
+<p><strong>Exercise 2:</strong> The file <code>pulmonCat.txt</code> contains data about lung cancer mortality for males and females in Catalonia of the period 1975-1997. Each column contains the next variables: gender, year of mortality, number of deaths and at-risk population. Perform next tasks:</p>
 <ul>
-<li>Temporal trend analysis for males and females</li>
+<li>A temporal trend analysis for males and females separately</li>
 <li>Which are your conclusions from the obtained results?</li>
 </ul>
 <hr />
