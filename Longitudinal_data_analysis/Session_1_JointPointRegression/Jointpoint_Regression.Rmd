@@ -175,16 +175,15 @@ cbind(year=c(1999, mod$Joinpoints),
 
 ## Automatic method of model selection
 
-In some ocassion the user is interested in selecting the best modelby using an automatic method by using backward or forward approaches
-Si queremos escoger el modelo de forma automática, utilizamos un método de selección 'backward' o 'forward'. This can be performed by using the function `ljrb` or `ljrf`.
+In some ocassion the user is interested in selecting the best modelby using an automatic method by using backward or forward approaches. This can be performed by using the function `ljrb` or `ljrf`.
 Note that in 'barckward' method the argument `K` is required. This indicates the maximum number of joinpoints to be tested. The 'forward' method starts from the null model (e.g. linear trend or no joinpoints) and tests whether the inclusion of a new joinpoint is statistically significant or not. 
 
 ```{r, backw}
-ljrb(K=3, kcm$Count, kcm$Population, kcm$Year+.5) 
+ljrb(K=3, R=10000, kcm$Count, kcm$Population, kcm$Year+.5) 
 ```
 
 ```{r, forw}
-ljrf(kcm$Count, kcm$Population, kcm$Year+.5)
+ljrf(kcm$Count, kcm$Population, kcm$Year+.5, R=10020)
 ```
 
 # Exercise (to deliver)

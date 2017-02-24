@@ -262,7 +262,7 @@ lines(kcm$Year, rate.pred, lwd=2, lty=2, col=&quot;red&quot;)</code></pre>
 <pre class="r"><code> ljrjk(1, 2, kcm$Count, kcm$Population, kcm$Year+.5, 
              R=1000,alpha=.05)</code></pre>
 <pre><code>## Testing H0:  1  joinpoint(s) vs. H1:  2  joinpoints
-## p-value= 0.031 
+## p-value= 0.037 
 ## Null hypothesis is rejected
 ## 
 ## Model:
@@ -291,7 +291,7 @@ lines(kcm$Year, rate.pred, lwd=2, lty=2, col=&quot;red&quot;)</code></pre>
 ## [1] -0.1125223
 ## 
 ## $pval
-## [1] 0.031</code></pre>
+## [1] 0.037</code></pre>
 <p>Here we can conclude that</p>
 <p>Once the model is selected, we can compute the anual percentage of change of each segment by</p>
 <pre class="r"><code>mod &lt;- ljrk(2, kcm$Count, kcm$Population, kcm$Year+.5)</code></pre>
@@ -318,15 +318,15 @@ lines(kcm$Year, rate.pred, lwd=2, lty=2, col=&quot;red&quot;)</code></pre>
 </div>
 <div id="automatic-method-of-model-selection" class="section level2">
 <h2><span class="header-section-number">4.3</span> Automatic method of model selection</h2>
-<p>In some ocassion the user is interested in selecting the best modelby using an automatic method by using backward or forward approaches Si queremos escoger el modelo de forma automática, utilizamos un método de selección ‘backward’ o ‘forward’. This can be performed by using the function <code>ljrb</code> or <code>ljrf</code>. Note that in ‘barckward’ method the argument <code>K</code> is required. This indicates the maximum number of joinpoints to be tested. The ‘forward’ method starts from the null model (e.g. linear trend or no joinpoints) and tests whether the inclusion of a new joinpoint is statistically significant or not.</p>
-<pre class="r"><code>ljrb(K=3, kcm$Count, kcm$Population, kcm$Year+.5) </code></pre>
+<p>In some ocassion the user is interested in selecting the best modelby using an automatic method by using backward or forward approaches. This can be performed by using the function <code>ljrb</code> or <code>ljrf</code>. Note that in ‘barckward’ method the argument <code>K</code> is required. This indicates the maximum number of joinpoints to be tested. The ‘forward’ method starts from the null model (e.g. linear trend or no joinpoints) and tests whether the inclusion of a new joinpoint is statistically significant or not.</p>
+<pre class="r"><code>ljrb(K=3, R=10000, kcm$Count, kcm$Population, kcm$Year+.5) </code></pre>
 <pre><code>## Backward algorithm for determining the number of joinpoints:
 ## Step  1 : Test H0: 0  joinpoint(s) vs H1: 3  joinpoint(s)
-## p-value=  0.024 
+## p-value=  0.0258 
 ## Step  2 : Test H0: 0  joinpoint(s) vs H1: 2  joinpoint(s)
-## p-value=  0.006 
+## p-value=  0.0145 
 ## Step  3 : Test H0: 1  joinpoint(s) vs H1: 2  joinpoint(s)
-## p-value=  0.042 
+## p-value=  0.0416 
 ## 
 ##  Estimated number of joinpoints=  1 
 ## 
@@ -354,30 +354,45 @@ lines(kcm$Year, rate.pred, lwd=2, lty=2, col=&quot;red&quot;)</code></pre>
 ## [1] -0.112523
 ## 
 ## $pvals
-## [1] 0.024 0.006 0.042</code></pre>
-<pre class="r"><code>ljrf(kcm$Count, kcm$Population, kcm$Year+.5)</code></pre>
+## [1] 0.0258 0.0145 0.0416</code></pre>
+<pre class="r"><code>ljrf(kcm$Count, kcm$Population, kcm$Year+.5, R=10020)</code></pre>
 <pre><code>## Forward algorithm for determining the number of joinpoints:
 ## Step  1 : Test H0: 0  joinpoint(s) vs H1: 1  joinpoint(s)
-## p-value=  0.05 
+## p-value=  0.04091816 
+## Step  2 : Test H0: 1  joinpoint(s) vs H1: 2  joinpoint(s)
+## p-value=  0.04071856 
+## Step  3 : Test H0: 2  joinpoint(s) vs H1: 3  joinpoint(s)
+## p-value=  0.7203593 
 ## 
-##  Estimated number of joinpoints=  0 
+##  Estimated number of joinpoints=  2 
 ## 
 ## Model:
 ## y~Binom(n,p) where p=invlogit(eta)
-## eta=b0+g0*t
+## eta=ofst+b0+g0*t+g1*max(t-tau1,0)+g2*max(t-tau2,0)
 ## 
-##    Variables         Coef
-## b0 Intercept -4.190069631
-## g0         t -0.000935695</code></pre>
+##        Variables         Coef
+## b0     Intercept -36.31521597
+## g0             t   0.01512302
+## g1 max(t-tau1,0)  -0.03460547
+## g2 max(t-tau2,0)   0.04383173
+## 
+## Joinpoints:
+##                 
+## 1 tau1= 2004.500
+## 2 tau2= 2002.039</code></pre>
 <pre><code>## $Coef
-##    Intercept            t 
-## -4.190069631 -0.000935695 
+##     Intercept             t max(t-tau1,0) max(t-tau2,0) 
+##  -36.31521597    0.01512302   -0.03460547    0.04383173 
+## 
+## $Joinpoints
+##    tau1=    tau2= 
+## 2004.500 2002.039 
 ## 
 ## $wlik
-## [1] -0.1125237
+## [1] -0.1125223
 ## 
 ## $pvals
-## [1] 0.05 0.00 0.00 0.00 0.00</code></pre>
+## [1] 0.04091816 0.04071856 0.72035928 0.00000000 0.00000000</code></pre>
 </div>
 </div>
 <div id="exercise-to-deliver" class="section level1">
