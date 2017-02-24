@@ -188,7 +188,26 @@ ljrb(K=3, kcm$Count, kcm$Population, kcm$Year+.5)
 ljrf(kcm$Count, kcm$Population, kcm$Year+.5)
 ```
 
-We observe that   
+# Exercise (to deliver)
+
+---------------------
+
+**Exercise 1:** The file `mamaCat.txt` (available at https://github.com/isglobal-brge/TeachingMaterials/tree/master/Longitudinal_data_analysis/data) contains data about breast cancer mortality in women between 35 and 65 years old in Catalonia. Rates correspond to the period 1975-1997. Each column contains the next variables: year of mortality, number of deaths and at-risk population. Perform next tasks: 
+
+* Create a plot to visualize temporal tren 
+* Estimate a Poisson model (or another one that controls for overdispersion if exists) and estimate the percentage of annyal change in the mortality rates. 
+* Visualy detect how many changes of trens (e.g. joinpoints) whold fit the data
+* Perform a test to determine whether the selected model is better than the one considering a single trend
+* Use an automatic method to analize these data and determine how many joinpoints are neccesaries to model the temporal trend
+* In case of having several trend changes, estimate the APC of each segment
+
+**Exeercise 2** The file  `pulmonCat.txt` (also available in the same repository) contains data about lung cancer mortality in males and females in Catalonia of the period 1975-1997. Each column contains the next variables: gender, year of mortality, number of deaths and at-risk population. Perform next tasks: 
+
+* Temporal trend analysis for males and females
+* Which are your conclusions from the obtained results?
+
+---------------------
+ 
 
 
 # References
