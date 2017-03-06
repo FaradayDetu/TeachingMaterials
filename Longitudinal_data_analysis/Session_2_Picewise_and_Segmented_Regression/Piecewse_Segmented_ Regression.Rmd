@@ -68,7 +68,7 @@ where:
 * $y_i$ is the cholesterol level of individual $i$
 * $x_{i1}$ is the calories intake of individual $i$
 * $x_{i2}$ is a dummy variable $(0, \mbox{ if } x_{i1} \le 2950 \mbox{ and } 1, \mbox{ if } x_{i1} > 2950)$ of individual $i$
-* $x^{\ast}_{i2}$ denotes the $(x_{i1} - 2700)x_{i2}$ the interaction term
+* $x^{\ast}_{i2}$ denotes the $(x_{i1} - 2950)x_{i2}$ the interaction term
 
 and the independent error terms $\epsilon_i$ follow a normal distribution with mean 0 and equal variance $\sigma^2$. The model can be estimated using different methods. Let us describre two of them. 
 
