@@ -37,37 +37,48 @@ Mañanas: de 9:00 a 13:30h / Tardes: de 15:00 a 18:00h
 
 # Temario
 **Día 1: Programación en R, creación de librerías y creación de documentos con Rmarkdown.**
+
 Parte I - Programación en R  (2 horas)
 - Creación de nuevas funciones
-	- Cómo organizar una función 
-	- Nombres de argumentos y valores por defecto
-	- Control de los argumentos
-  - Uso de 'formula'   
+- Cómo organizar una función 
+- Nombres de argumentos y valores por defecto
+- Control de los argumentos
+- Uso de 'formula'   
+
 Parte II - Métodos y clases en R (2 horas)
 - Programación orientada a objetos
 - Creación de Métodos
 - Creación de Clases
+
 Parte III - Creación de una librería (1 horas)
 - Estructura básica
+
 Parte IV - Investigación reproducible (2 horas)
 - Creación de documentación
-	- Knitr
-	- Markdown
+- Knitr
+- Markdown
 - Envío a CRAN o Bioconductor.
 
 **Día 2: Creación de interfaces gráficas con Shiny**
+
 Parte I  -  Introducción: instalación de Shiny y primeros ejemplos (0'5 horas)
+
 Parte II - Diseño del formulario de la aplicación: disposición de los elementos (Sección UI) (1'5 horas)
+
 Parte III - Lógica de Shiny: cómo funciona (Sección Server). (1'5 horas)
+
 Parte IV  - Cómo mejorar el aspecto y la funcionalidad de la aplicación mediante paquetes complementarios a Shiny: shinyBS, shinythemes, shinyjs. (1 hora)
+
 Parte V -  Práctica: creación de una aplicación. (1'5 horas)
 
 **Dia 3: Manejo de repositorios**
+
 Parte I - Github Básico
 - ¿Qué es un sistema de control de versiones?
 - GitHub - Presentación
 - Creación de una cuenta en GitHub y del primer repositorio
 - Interfaz GitHub desktop y/o GitKraken
+
 Parte II - GitHub Avanzado
 - Comandos básicos (status, add, rm, commit y push)
 - Comandos avanzados (stash, rollback)
@@ -88,7 +99,7 @@ Isaac Subirana, Técnico Investigador en el Grupo REGICOR (IMIM-Parc de Salut Mar
 Carles Hernández-Ferrer, Investigador pre-doctoral del BRGE del Instituto de Salud Global Barcelona (ISGlobal).
 
 # Coste del curso y forma de pago
-El coste del curso es de 340 euros que incluye el desayuno que se realizará a mitad de la mañana así como todo el material del curso en soporte electrónico (funciones, librerías y ejercicios resueltos) las diapositivas y material bibliográfico presentado en las clases.  El número de alumnos será de un máximo de 20. Los socios del BIB tendrán un descuento del 10% pero sólo a los dos primeros miembros que lo soliciten. El resto si quieren asistir al curso deberán abonar el coste total.
+El coste del curso es de 340 euros que incluye el desayuno que se realizará a mitad de la mañana así como todo el material del curso en soporte electrónico (funciones, librerías y ejercicios resueltos) las diapositivas y material bibliográfico presentado en las clases.  El número de alumnos será de un máximo de 20. Los socios del [Barcelona Bioinformatics (BIB)](http://www.bioinformaticsbarcelona.eu/) tendrán un descuento del 10% pero sólo a los dos primeros miembros que lo soliciten. El resto si quieren asistir al curso deberán abonar el coste total.
 
 Una vez confirmada la inscripción al curso, se deberá realizar el pago a  través de transferencia bancaria, al número de cuenta CAIXABANK, S.A numero ES79 2100 0801 1102 0052 1586. Una vez realizado el ingreso el alumno tendrá que enviar el comprobante de la transferencia a gemma.punyet@isglobal.org 
 
