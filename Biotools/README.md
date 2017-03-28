@@ -61,15 +61,20 @@ Parte IV - Investigación reproducible (2 horas)
 
 **Día 2: Creación de interfaces gráficas con Shiny**
 
-Parte I  -  Introducción: instalación de Shiny y primeros ejemplos (0'5 horas)
+Parte I  
+-  Introducción: instalación de Shiny y primeros ejemplos (1 horas)
 
-Parte II - Diseño del formulario de la aplicación: disposición de los elementos (Sección UI) (1'5 horas)
+Parte II 
+- Diseño del formulario de la aplicación: disposición de los elementos (Sección UI) (1'5 horas)
 
-Parte III - Lógica de Shiny: cómo funciona (Sección Server). (1'5 horas)
+Parte III 
+- Lógica de Shiny: cómo funciona (Sección Server). (1'5 horas)
 
-Parte IV  - Cómo mejorar el aspecto y la funcionalidad de la aplicación mediante paquetes complementarios a Shiny: shinyBS, shinythemes, shinyjs. (1 hora)
+Parte IV  
+- Cómo mejorar el aspecto y la funcionalidad de la aplicación mediante paquetes complementarios a Shiny: shinyBS, shinythemes, shinyjs. (1 hora)
 
-Parte V -  Práctica: creación de una aplicación. (1'5 horas)
+Parte V 
+-  Práctica: creación de una aplicación. (2 horas)
 
 **Dia 3: Manejo de repositorios**
 
@@ -112,9 +117,8 @@ El Instituto de Salud Global Barcelona (ISGlobal) se encuentra en el Parque de I
 
 Se puede llegar a través de varias vías. Si necesitáis más información podéis consultar la web de Transportes Metropolitanos de Barcelona ( www.tmb.net ).
 
-Paradas de transporte público cercanas al centro:
-Metro: Línea 4 (amarilla), paradas cercanas: Barceloneta y Ciutadella.
-Autobús: 10-14-36-41-45-57-59-71-92-157
+Paradas de Metro cercanas al centro: Línea 4 (amarilla) Barceloneta y Ciutadella.
+
 
 
 
