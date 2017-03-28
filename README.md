@@ -19,14 +19,31 @@ redistribute it, do so under the same license.
 
 # List of Materials
 
+## Course on Biotools in biostatistics and bioinformatics
+
+- Description: A 3-day course given at ISGlobal 
+- Author: [Juan R Gonzalez](https://github.com/isglobal-brge/), Cales Hernandez-Ferrer and Isaac Subirana
+- Content: Part I: Advanced R programming; Part II: Reproducible research (Knitr and Markdown); Part III: Version control (Github); Part IV: Shinny
+- Original Repository: 
+
 ## Longitudinal data analysis (in Spanish)
 
-- Description:
-- Author:
-- Content:
+- Description: Trimester course given at Degree of Statistics (UAB)
+- Author: [Juan R Gonzalez](https://github.com/isglobal-brge/)
+- Content: Part I: Analysis of temporal trends; Part II: Survival Analysis with recurrent event data; Part III: Non-linear models; Part IV: Longitudinal linear models. 
+- Original repository: https://github.com/isglobal-brge/TeachingMaterials/tree/master/Longitudinal_data_analysis
+
+
+## BioC
+
+- Description: 2-hour lecture introducing Bioconductor
+- Author: [Juan R Gonzalez](https://github.com/isglobal-brge/)
+- Content: Part I:Introduction to Bioconductor; Part II: Handling omic data (SnpMatrix, ExpressionSet, GenomicRanges, SummarizedExperiment and MultiDataSet)
+- Original repository: https://github.com/isglobal-brge/TeachingMaterials/tree/master/BioC
 
 ## Genetic association studies
 
-- Description:
-- Author:
-- Content:
+- Description: Lectures given at Master in Bioinformatics (UAB) and Master of Omic data analysis (UVic)
+- Author: [Juan R Gonzalez](https://github.com/isglobal-brge/)
+- Content: Single association analysis, haplotype analysis, GWAS, post-GWAS
+- Original repository:
