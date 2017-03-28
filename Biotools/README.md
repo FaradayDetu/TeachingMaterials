@@ -30,7 +30,7 @@ Para obtener un mejor provecho del curso, es necesario tener cierta experiencia 
 Las sesiones serán de 2 horas. La primera media hora servirá para introducir a los participantes en un tema concreto. La siguiente media hora consistirá en un ejemplo basado en un problema real que servirá para ilustrar el tema tratado. La siguiente hora consistirá en un ejercicio que los participantes deberán resolver y que será comentado y resuelto tras su finalización. Los participantes dispondrán de las diapositivas del curso y el código utilizado tanto en la presentación como para resolver los ejercicios resueltos. 
 
 # Fechas y horario
-Las fechas del curso serán el 16, 17 y 18 de Mayo y se realizará en el Campus Mar del Instituto de Salud Global de Barceloan, ISGlobal ( www.isglobal.org ) [antiguo CREAL] situado en el Parque de Investigación Biomédica de Barcelona  (www.prbb.org ). El número de plazas para el curso está limitado a 20 y las plazas se han adjudicado ESTRICTAMENTE por orden de llegada de pre-inscripción, enviando un email a gemma.punyet@isglobal.org con el nombre y la institución a la que se pertenece.
+Las fechas del curso serán el 16, 17 y 18 de Mayo y se realizará en el Instituto de Salud Global Barcelona, ISGlobal - Campus Mar ( www.isglobal.org ) [antiguo CREAL - www.creal.cat] situado en el Parque de Investigación Biomédica de Barcelona  (www.prbb.org ). El número de plazas para el curso está limitado a 20 y las plazas se han adjudicado ESTRICTAMENTE por orden de llegada de pre-inscripción, rellenando el [formulario de inscripción]( https://docs.google.com/forms/d/e/1FAIpQLSeY0v5l7gbze0CEBlR5gx33A69dyk7uNk4KJZxcE8DtXje-Gw/viewform?usp=sf_link) 
 
 El horario del curso es el siguiente:
 Mañanas: de 9:00 a 13:30h / Tardes: de 15:00 a 18:00h
@@ -75,26 +75,26 @@ Parte II - GitHub Avanzado
 
 
 # Material y Requisitos
-Para abaratar el coste del curso, las clases se realizarán en un aula del ISGlobal (Campus Mar - situado en el PRBB) y los alumnos deberán traer sus propios portátiles. Dicha aula tendrá acceso WiFi a Internet y los alumnos dispondrán de acceso previo a todo el material del curso que incluye las librerías, el código R y los datos necesarios para seguir las clases y realizar los ejercicios. 
+Los alumnos deberán traer sus propios portátiles. Dicha aula tendrá acceso WiFi a Internet y los alumnos dispondrán de acceso previo a todo el material del curso que incluye las librerías, el código R y los datos necesarios para seguir las clases y realizar los ejercicios. 
 
 El curso utilizará dos herramientas principales: Rstudio y Github. Todos los participantes deberán tener instalado una semana antes del curso la version de Rstudio 1.0.136 ( https://www.rstudio.com/ ) y la interfaz de Github desktop (Windows: https://desktop.github.com/, Linux: https://www.gitkraken.com/ ) . No hace falta tener una cuenta en Github porque aprenderemos a crearla en el curso (si ya la tiene no hay problema). Durante esa semana anterior al curso, se enviará unas instrucciones para que todos los alumnos tengan una misma configuración y puedan seguir las clases de forma eficiente. 
 
 
 # Profesorado
-Juan R González, Responsable del Grupo de Investigación en Bioinformática en Epidemiología Genética (BRGE) del Instituto de Salud Global (ISGlobal) de Barcelona y profesor asociado al Departamento de Matemáticas de la Universidad Autónoma de Barcelona (UAB).
+Juan R González, Responsable del Grupo de Investigación en Bioinformática en Epidemiología Genética (BRGE) del Instituto de Salud Global Barcelona (ISGlobal) y Profesor Asociado al Departamento de Matemáticas de la Universidad Autónoma de Barcelona (UAB).
 
-Isaac Subirana,  técnico investigador en el Grupo REGICOR (IMIM-Parc de Salut Mar) y profesor asociado en el departamento de Estadística de la Facultad de Biología de la Universidad de Barcelona (UB)
+Isaac Subirana, Técnico Investigador en el Grupo REGICOR (IMIM-Parc de Salut Mar) y Profesor Asociado en el Departamento de Estadística de la Facultad de Biología de la Universidad de Barcelona (UB).
 
-Carles Hernández-Ferrer, Master en Bionformática y estudiante de doctorado en el BRGE del Instituto de Salud Global de Barcelona (ISGlobal)
+Carles Hernández-Ferrer, Investigador pre-doctoral del BRGE del Instituto de Salud Global Barcelona (ISGlobal).
 
 # Coste del curso y forma de pago
-El coste del curso es de 340??? que incluye el almuerzo que se realizará a mitad de la mañana así como todo el material del curso en soporte electrónico (funciones, librerías y ejercicios resueltos) las diapositivas y material bibliográfico presentado en las clases.  El número de alumnos será de un máximo de 20 y se las peticiones se atenderán por estricto orden de inscripción. Los socios del BIB tendrán un descuento del 10% pero sólo a los dos primeros miembros que lo soliciten. El resto si quieren asistir al curso deberán abonar el coste total.
+El coste del curso es de 340 euros que incluye el desayuno que se realizará a mitad de la mañana así como todo el material del curso en soporte electrónico (funciones, librerías y ejercicios resueltos) las diapositivas y material bibliográfico presentado en las clases.  El número de alumnos será de un máximo de 20. Los socios del BIB tendrán un descuento del 10% pero sólo a los dos primeros miembros que lo soliciten. El resto si quieren asistir al curso deberán abonar el coste total.
 
 Una vez confirmada la inscripción al curso, se deberá realizar el pago a  través de transferencia bancaria, al número de cuenta CAIXABANK, S.A numero ES79 2100 0801 1102 0052 1586. Una vez realizado el ingreso el alumno tendrá que enviar el comprobante de la transferencia a gemma.punyet@isglobal.org 
 
 
-# Acceso al Campus Mar ISGlobal (PRBB) 
-El Instituto de Salud Global (ISGlobal) de Barcelona se encuentra en el Parque de Investigación Biomédica de Barcelona (PRBB) situado en la calle Doctor Aiguader, n. 88 de Barcelona, en la primera planta del PRBB, delante del paseo marítimo de Barcelona, entre el Hospital del Mar y el Hotel Arts de la Villa Olímpica. 
+# Acceso al Campus Mar - ISGlobal (PRBB) 
+El Instituto de Salud Global Barcelona (ISGlobal) se encuentra en el Parque de Investigación Biomédica de Barcelona (PRBB) situado en la calle Doctor Aiguader, 88 de Barcelona, en la primera planta del PRBB, delante del Paseo Marítimo de Barcelona, entre el Hospital del Mar y el Hotel Arts de la Villa Olímpica. 
 
  ![PRBB localization](figures/prbb_loc.png)
 
