@@ -6,3 +6,4 @@ Bioconductor_intro_files
 *.sty
 *.log
 *.tex
+*.Rhistory
