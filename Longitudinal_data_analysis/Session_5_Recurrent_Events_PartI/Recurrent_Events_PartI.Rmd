@@ -2,10 +2,10 @@
 title: "Recurrent events with `R` (Part I)"
 author: "Juan R Gonzalez"
 output:
+  BiocStyle::html_document:
+    toc_depth: 2
   BiocStyle::pdf_document:
     fig_caption: yes
-    toc_depth: 2
-  BiocStyle::html_document:
     toc_depth: 2
 ---
 
@@ -70,9 +70,9 @@ head(with(colon2, Survr(hc, time, event)))
 
 NOTE: the function `addCenTime` has by default the arguments `id=1`, `time=2` and `event=3` indicating the columns where those variables are located in your `data.frame`.
 
-## Peña-Strawderman-Hollander (PSH) estimator
+## Pe\~na-Strawderman-Hollander (PSH) estimator
 
-The estimation of survival curve using [Peña-Strawderman-Hollander](https://www.jstor.org/stable/3085901) method is estimated by 
+The estimation of survival curve using [Pe\~na-Strawderman-Hollander](https://www.jstor.org/stable/3085901) method is estimated by 
 
 ```{r, psh}
 ans.psh <- survfitr(Survr(hc, time, event) ~ 1, data=colon2,
@@ -91,7 +91,7 @@ head(cbind(ans.km$std, ans.psh$std))
 
 ## Frailty model estimator (FRMLE)
 
-[Peña-Strawderman-Hollander](https://www.jstor.org/stable/3085901) also proposed to estimate the survival function with recurrent event data when inter-occurrence times are correlate by using a Frailty model. This model can be estimated by executing 
+[Pe\~na-Strawderman-Hollander](https://www.jstor.org/stable/3085901) also proposed to estimate the survival function with recurrent event data when inter-occurrence times are correlate by using a Frailty model. This model can be estimated by executing 
 
 ```{r, frmle}
 ans.fra <- survfitr(Survr(hc, time, event) ~ 1, data=colon2,
@@ -138,7 +138,7 @@ Confidence bands are depicted by default
 plot(ans.wc)
 ```
 
-The methodology previously described is further explained in a review written in Spanish by [Gonzalez and Peña](http://scielo.isciii.es/scielo.php?script=sci_arttext&pid=S1135-57272004000200006) which '.pdf' is also available in the teaching course material repository.   
+The methodology previously described is further explained in a review written in Spanish by [Gonzalez and Pe\~na](http://scielo.isciii.es/scielo.php?script=sci_arttext&pid=S1135-57272004000200006) which '.pdf' is also available in the teaching course material repository.   
 
 
 # Comparing survival curves
@@ -152,7 +152,7 @@ fit.dukes <- survfitr(Survr(hc, time, event) ~ as.factor(dukes), data=colon2,
 plot(fit.dukes) 
 ```
 
-In the single setting, there are methods to compare the behaviour of the overall curve such as the log-rank or Wilcoxon tests among others. In recurrent event settings, only there are methods to compare survival curves at a given time. These methods are describe in [González, Peña and Delicado](http://upcommons.upc.edu/handle/2117/7475) and are based on bootstrap techniques. This is performed by using the `survdiffr()` function. The argument `q=0.5` indicates that we are interested in estimating confidence interval of median survival time:
+In the single setting, there are methods to compare the behaviour of the overall curve such as the log-rank or Wilcoxon tests among others. In recurrent event settings, only there are methods to compare survival curves at a given time. These methods are describe in [Gonz\'alez, Pe\~na and Delicado](http://upcommons.upc.edu/handle/2117/7475) and are based on bootstrap techniques. This is performed by using the `survdiffr()` function. The argument `q=0.5` indicates that we are interested in estimating confidence interval of median survival time:
 
 ```{r, boot}
 fit <- survdiffr(Survr(hc, time, event) ~ as.factor(dukes), data=colon2, q=0.7)
@@ -174,7 +174,7 @@ Level    Percentile   BCa
 Calculations and Intervals on Original Scale
 Some BCa intervals may be unstable  
 ```
-NOTE: this function is havin problems that are being fixed by the maintainer.
+NOTE: this function is having problems that are being fixed by the maintainer.
 
 
 ## Comparing the whole survival curve
@@ -227,15 +227,15 @@ NOTE: variable _distrib_ encodes the lesions involved at diagnosis and has 4 cat
 
 - The [`TestSurvRec`] package (https://cran.r-project.org/web/packages/TestSurvRec/)
 
-- Peña, E.A., Strawderman, R. and Hollander, M. (2001). Nonparametric Estimation with Recurrent Event Data. J. Amer. Statist. Assoc 96, 1299-1315.
+- Pe\~na, E.A., Strawderman, R. and Hollander, M. (2001). Nonparametric Estimation with Recurrent Event Data. J. Amer. Statist. Assoc 96, 1299-1315.
 
 - Wang, M.C. and Chang, S.H. (1999). Nonparametric Estimation of a Recurrent Survival Function. J. Amer. Statist. Assoc 94, 146-153.
 
-- González, J.R and Peña, E. (2004) Estimación no paramétrica de la función de superviencia para datos con eventos recurrentes. Rev. Esp. Salud Publica 78(2).  
+- Gonz\'alez, J.R and Pe\~na, E. (2004) Estimación no paramétrica de la función de superviencia para datos con eventos recurrentes. Rev. Esp. Salud Publica 78(2).  
 
-- González, J.R., Peña, E. and Delicado, P. (2010) Confidence intervals for median survival time with recurrent event data. Computational Statistics and Data Analysis, 54 (1) 78-89.
+- Gonz\'alez, J.R., Pe\~na, E. and Delicado, P. (2010) Confidence intervals for median survival time with recurrent event data. Computational Statistics and Data Analysis, 54 (1) 78-89.
 
-- Martínez C., Ramírez, G., Vásquez M. (2009). Pruebas no paramétricas para comparar curvas de supervivencia de dos grupos que experimentan eventos recurrentes. Propuestas. Revista Ingeniería U.C., Vol 16, 3, 45-55.
+- Mart\'inez C., Ram\'irez, G., V\'asquez M. (2009). Pruebas no param\'etricas para comparar curvas de supervivencia de dos grupos que experimentan eventos recurrentes. Propuestas. Revista Ingenier\'ia U.C., Vol 16, 3, 45-55.
 
 
 
