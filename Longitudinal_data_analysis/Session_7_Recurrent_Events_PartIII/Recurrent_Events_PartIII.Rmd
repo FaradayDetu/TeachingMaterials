@@ -2,10 +2,10 @@
 title: "Recurrent events with `R` (Part III) - Frailty models"
 author: "Juan R Gonzalez"
 output:
+  BiocStyle::html_document:
+    toc_depth: 2
   BiocStyle::pdf_document:
     fig_caption: yes
-    toc_depth: 2
-  BiocStyle::html_document:
     toc_depth: 2
 ---
 
@@ -44,9 +44,9 @@ In particular, the \emph{shared frailty} model can be applied to model recurrent
 \end{equation}
 
 where where $\lambda_{0}(t)$ is the baseline hazard function,
-$\beta=(\beta_1,\ldots,\beta_p)^{'}$ is a $p\times1$ vector of unknown regression parameters, $X_{ik}$ denote the covariate vector for the $i$-th patient with respect to the $k$-th event and $W_i$s are unobserved random variables (the frailties). It is assumed that the $Z_i$s are independently and identically distributed from a gamma distribution with mean 1 and unknown variance $\xi$ at origin time. Other parametrizations have been used such as _gaussian_ or _t_ distributions. 
+$\beta=(\beta_1,\ldots,\beta_p)^{'}$ is a $p\times1$ vector of unknown regression parameters, $X_{ik}$ denote the covariate vector for the $i$-th patient with respect to the $k$-th event and $Z_i$s are unobserved random variables (the frailties). It is assumed that the $Z_i$s are independently and identically distributed from a gamma distribution with mean 1 and unknown variance $\xi$ at origin time. Other parametrizations have been used such as _gaussian_ or _t_ distributions. 
 
-The use of a gamma distribution facilitates the interpretation of the fitted results. This random variable has two parameters, so that, the frailty is normally assumed that follows a $\mbox{gamma}(\alpha, \alpha)$. Therefore, the unobserved frailties have an expected mean value equal to 1 and variance equal to $\alpha$ (or $1/\alpha$ depending the parametrization). Having $\alpha$ close to 0 indicates that little heterogeneity is observed accross recurrences. This can be considerd as a formal test equivalent to the visual approach we did when comparing survival curves estimated using PSH, FRMLE, and WC estimators.
+The use of a gamma distribution facilitates the interpretation of the fitted results. This random variable has two parameters, so that, the frailty is normally assumed that follows a $\mbox{gamma}(\xi, \xi)$. Therefore, the unobserved frailties have an expected mean value equal to 1 and variance equal to $\xi$ (or $1/\xi$ depending the parametrization). Having $\xi$ close to 0 indicates that little heterogeneity is observed accross recurrences. This can be considerd as a formal test equivalent to the visual approach we did when comparing survival curves estimated using PSH, FRMLE, and WC estimators.
 
 # Model parameter estimates
 
@@ -73,7 +73,7 @@ coxph(Surv(time, event) ~ sex + frailty(id), data = readmission)
 
 Here, we observe as the frailty is highly significant and that the variance of the frailty (e.g, variance of the random effect modelled through a gamma distribution) is far from 0. The question of determining whether this variance is statistically different from 0 cannot be addresed by using this method of estimation since this approach is not able to estimate the variance of the variance of frailty that would help to properly test this hypotesis:
 
-$$ \mbox{H}_0: \alpha=0$$
+$$ \mbox{H}_0: \xi=0$$
 by using, for instance, a z-score test. Later on, we will see how to carried out this test by using a penalized version of the full likelihood. 
 
 We can also fit this model assuming another distrution of fraities. The `frailty()` function has an argument called `distribution` that can be change to _gaussian_ or _t_. For instance
@@ -117,20 +117,20 @@ mod.ag.fra <- frailtyPenal(Surv(t.start, t.stop, event) ~ sex + cluster(id),
                        cross.validation=TRUE)
 mod.ag.fra
 ```
-The main difference we can observed with regard to the Cox frailty model estimated by using penalized partial likelihood is that this method provides a proper test to decide whether the variance of the frailty parameter is significant or not. In that case we observe that this variance is different from 0 with a very low p-value ($< 10^{-15}$). Let also notice that in this case the parameterization used of the gamma distribution is different from the one used in the FRMLE model proposed by [Pena, Strawderman and Hollander](). In that case $\alpha$ (Theta in the output) models the variance of the gamma frailty and is the inverse of the variance of gamma frailty considered in the FRMLE model. 
+The main difference we can observed with regard to the Cox frailty model estimated by using penalized partial likelihood is that this method provides a proper test to decide whether the variance of the frailty parameter is significant or not. In that case we observe that this variance is different from 0 with a very low p-value ($< 10^{-15}$). Let also notice that in this case the parameterization used of the gamma distribution is different from the one used in the FRMLE model proposed by [Pena, Strawderman and Hollander](). In that case $\xi$ (Theta in the output) models the variance of the gamma frailty and is the inverse of the variance of gamma frailty considered in the FRMLE model. 
 
 ## General class of models
 
-[Pena and Hollander]()  proposed a new class of models (referred to as PHol model) which generalizes most of existing reliability and Cox-based models. The hazard rate process for the $k$th recurrence of the $i$th patient at time $t$ conditionally on an unobserved frailty, $W_i$, and observed covariates $Z_{ik}$ is specified via
+[Pena and Hollander]()  proposed a new class of models (referred to as PHol model) which generalizes most of existing reliability and Cox-based models. The hazard rate process for the $k$th recurrence of the $i$th patient at time $t$ conditionally on an unobserved frailty, $Z_i$, and observed covariates $X_{ik}$ is specified via
 
 \begin{equation}\label{conditional hazard_PHol}
-\lambda(t|\textbf{W},\textbf{Z}_{ik}) = W_i\,
+\lambda(t|\textbf{Z},\textbf{X}_{ik}) = Z_i\,
 \lambda_0[\mathcal{E}_i(t)]\, \rho[k;\alpha]\,
-\exp[\beta'\textbf{Z}_{ik}(t)],
+\exp[\beta'\textbf{X}_{ik}(t)],
 \end{equation}
 
 where $\lambda_0(\cdot)$ is an unknown baseline hazard rate function, $\rho(\cdot;\alpha)$ has a known functional form depending on unknown parameter $\alpha$ that encodes the effects of accumulating events. The authors consider $\rho(k;\alpha)=\alpha^k$ which is able to model different scenarios. For instance, if $\alpha$ is greater than unity, the increasing number of hospital admissions has a damaging effect. 
-[Gail, Santner and Brown]() proposed to model the effect of the number of events using the function $\rho(k;\alpha)=\max\{\alpha-k,0\}$ which was considered to model cancer recurrences in different sites of the body. $\beta$ is a vector of parameters associated with covariate effects that can be time-dependent. The correlation between inter-event times is modeled with $W_i$ which are unobserved frailties. Again, we consider that $W_i$ follows a gamma distribution with mean 1 and unknown variance $\xi$. The model also incorporates the effect of performed interventions $\mathcal{E}_i(s)$, also called \emph{effective age} via the baseline hazard function which is not consider either in marginal, conditional or shared frailty models. There are several examples of how performed interventions after recurrences may change the probability of presenting a new event. For instance, people with cardiovascular disease are advised to do regular and moderate physical activity and stopping smoking habit. Thus, those patients who follow this advice will have less probability of presenting a new event that those that do not alter their lifestyle. Another example arises from patients with epileptic seizures, where recommendations in order to reduce the number of new seizures include sleeping 8 hours daily, avoiding exposition to flickering lights or reducing alcohol use. More examples about different \emph{effective age} formulation in cancer settings can be found in [Gonzalez, Pena and Slate]().
+[Gail, Santner and Brown]() proposed to model the effect of the number of events using the function $\rho(k;\alpha)=\max\{\alpha-k,0\}$ which was considered to model cancer recurrences in different sites of the body. $\beta$ is a vector of parameters associated with covariate effects that can be time-dependent. The correlation between inter-event times is modeled with $Z_i$ which are unobserved frailties. Again, we consider that $Z_i$ follows a gamma distribution with mean 1 and unknown variance $\alpha$. The model also incorporates the effect of performed interventions $\mathcal{E}_i(s)$, also called \emph{effective age} via the baseline hazard function which is not consider either in marginal, conditional or shared frailty models. There are several examples of how performed interventions after recurrences may change the probability of presenting a new event. For instance, people with cardiovascular disease are advised to do regular and moderate physical activity and stopping smoking habit. Thus, those patients who follow this advice will have less probability of presenting a new event that those that do not alter their lifestyle. Another example arises from patients with epileptic seizures, where recommendations in order to reduce the number of new seizures include sleeping 8 hours daily, avoiding exposition to flickering lights or reducing alcohol use. More examples about different \emph{effective age} formulation in cancer settings can be found in [Gonzalez, Pena and Slate]().
 
 As showed by [Pena and Hollander]() and [Pena, Slate and Gonzalez](), this class of models subsumes many existing ones. For example the PWP conditional model, considering no stratification, can be formulated to address either time since a patient entered the study or time since the last occurrence. Both cases corresponds to (\ref{conditional hazard_PHol}) with $\rho(k;\alpha)=1$, $Z_i=1, i=1,\ldots,n$, and $\mathcal{E}_i(t)=t$ or $\mathcal{E}_i(t)=t - t_{k-1}$, respectively. The counting process formulation, $\mathcal{E}_i(t)=t$, assumes that all interventions produce no improvement in the patient, that is, the disease is proceeding in a stable manner. Conversely, the gap time formulation, $\mathcal{E}_i(t)=t - t_{k-1}$, considers that all interventions lead to a complete remission of the disease. On the other hand, [Andersen and Gill]() (AG model) can be seen as a special case of PHol model taking $\rho(k;\alpha) = 1$, $Z=1$ and gap time formulation as the effective age. We consider the risk for the \emph{k}th recurrence under the common underlying hazard, $\lambda_0(t)$  among those patients who are under observation at the time \emph{t}.
 
