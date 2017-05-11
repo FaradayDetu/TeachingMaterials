@@ -7,3 +7,9 @@ Bioconductor_intro_files
 *.log
 *.tex
 *.Rhistory
+*.jpg
+*.nav
+*.synctex.gz
+*.toc
+*.vrb
+*.snm
