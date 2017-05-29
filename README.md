@@ -24,7 +24,7 @@ redistribute it, do so under the same license.
 - Description: A 3-day course given at ISGlobal 
 - Author: [Juan R Gonzalez](https://github.com/isglobal-brge/), Cales Hernandez-Ferrer and Isaac Subirana
 - Content: Part I: Advanced R programming; Part II: Reproducible research (Knitr and Markdown); Part III: Version control (Github); Part IV: Shinny
-- Original Repository: 
+- Original Repository: https://github.com/isglobal-brge/TeachingMaterials/tree/master/Biotools
 
 ## Longitudinal data analysis (in Spanish)
 
