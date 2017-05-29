@@ -26,8 +26,8 @@ tidy=FALSE, size='footnotesize', warning=FALSE, message=FALSE, fig.align='center
 \title[Omic data analysis]{Multi-omic data analysis}
 \author[Juan R Gonzalez]{Juan R Gonzalez}
 \institute[CREAL]{BRGE - Bioinformatics Research Group in Epidemiology \\
-		  Barcelona Institute for Global Health (ISGlobal) \\ \\
-                  {\tt e-mail:juanr.gonzalez@isglobal.org} \\
+		  Barcelona Institute for Global Health (ISGlobal) \\ 
+		           {\tt e-mail:juanr.gonzalez@isglobal.org} \\
                   \url{http://www.creal.cat/brge} 
                   }
                  
