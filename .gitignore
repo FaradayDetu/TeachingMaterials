@@ -14,3 +14,6 @@ Bioconductor_intro_files
 *.vrb
 *.snm
 *.doc
+Multiomic_data_analysis/cache
+Multiomic_data_analysis/figures
+Multiomic_data_analysis/figure
