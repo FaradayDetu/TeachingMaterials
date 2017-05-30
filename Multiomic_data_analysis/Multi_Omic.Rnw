@@ -650,8 +650,30 @@ $V_y$ and $V_x$ are selected to maximize:
 
 \end{frame}
 
+\begin{frame}\frametitle{Canonical Correlation}
+
+\begin{itemize}
+\item CCA has been used in omic data
+\item The main limitation is that the number of features generally greatly exceeds the number of observations
+\item Consequence 1: parameter estimation cannot be applied using standard methods
+\item  Consequence 2: Most of markers are having no effect in the canonical axes (e.g. almost all components in a and b are 0)
+\item Penalized (sparse) CCA has been proposed
+\item Main advantages: More than two tables, easy interpretation (do not need computing p-values nor correcting for multiple comparisons)
+\end{itemize}
+
+\end{frame}
 
 
+
+\begin{frame}\frametitle{Sparse canonical correlation}
+
+\begin{figure}
+\begin{center}
+ \includegraphics[height=5cm, width=8cm]{figures/mCCA.png}
+\end{center}
+\end{figure}
+
+\end{frame}
 
 \begin{frame}{Co-Inertia}
 
@@ -665,6 +687,7 @@ $V_y$ and $V_x$ are selected to maximize:
  \end{itemize}
 
 \end{frame}
+
 
 
 \begin{frame}[fragile]\frametitle{Canonical Correlation: gene expression and proteins}
@@ -765,7 +788,7 @@ plot(resCIA, classvec=group, nlab=3, clab=0, cpoint=3 )
 \begin{frame}[fragile]\frametitle{More than two tables}
 
 
-<<mcia, fig.show='hide', cache=TRUE>>=
+<<mcia, cache=TRUE>>=
 require(omicade4)
 resMCIA <- mcia( breast_multi[ c(1,3,4,5,6,7) ] )
 @
@@ -844,6 +867,23 @@ text(resMCIA$mcoa$cov2, labels=rownames(resMCIA$mcoa$cov2),
 \end{itemize}
 \end{frame}
 
+
+\section{Recommended lectures}
+
+\begin{frame}\frametitle{Recommended lectures}
+
+\footnotesize
+
+\begin{itemize}
+\item Millstein et al. (2009). Disentangling molecular relationships with a causal inference test. BMC Bioinf, 10:23.
+\item Ebrahim and Smith (2008). Mendelian randomization: can genetic epidemiology help redress the failure of observational epidemiology?. Hum Genet, 123:15-33.
+\item Liu et al. (2013). Epifenome-wide association data implicate DNA methylation as an intermediary of genetic risk in rheumatoid arthritis. Nat Biotech, 31(2):142-148.
+\item Voight et al. (2012). Plasma HDL cholesterol and risk of myocardial infarction: a mendelian randomisation study. Lancet, 380(9841): 572-580.
+\item Meng et al. (2014). A multivariate approach to the integration of multi-omics datasets. BMC Bioinf, 15:162.
+\item Witten et al. (2009). A Penalized Matrix Decomposition, with Applications to Sparse Principal Components and Canonical Correlation Analysis. Biostatistics, 10(3):515-34.
+\item Meng et al (2016). Dimension reduction techniques for the integrative analysis of multi-omics data. Brief Bioinform, 17(4): 628-641. 
+\end{itemize}
+\end{frame}
 
 
 
