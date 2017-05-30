@@ -89,14 +89,23 @@ rownames(resMultiCCA$ws[[2]]) <- colnames(df2)
 head(resMultiCCA$ws[[1]])
 head(resMultiCCA$ws[[2]])
 
+## ----getcia--------------------------------------------------------------
+library(made4)
+library(omicade4)
+
 ## ----cia, cache=TRUE-----------------------------------------------------
 resCIA <- cia(breast_multi$RNAseq, breast_multi$RPPA)
 
 ## ----plot_cia, fig.show='hide'-------------------------------------------
 plot(resCIA, classvec=group, nlab=3, clab=0, cpoint=3 )
 
-## ----mcia, fig.show='hide', cache=TRUE-----------------------------------
-require(omicade4)
+## ----top_features--------------------------------------------------------
+topVar(resCIA, axis=1, topN=5, end="positive")
+
+## ----top_features_neg----------------------------------------------------
+topVar(resCIA, axis=1, topN=5, end="negative")
+
+## ----mcia, cache=TRUE----------------------------------------------------
 resMCIA <- mcia( breast_multi[ c(1,3,4,5,6,7) ] )
 
 ## ----plot_mcia, fig.show='hide'------------------------------------------
@@ -104,6 +113,9 @@ plot(resMCIA, axes=1:2, sample.lab=FALSE, sample.legend=FALSE,
      phenovec=group, gene.nlab=2, 
      df.color=c("cyan", "magenta", "red4", "brown","yellow", "orange"),
      df.pch=2:7)
+
+## ----top_features_m------------------------------------------------------
+topVar(resMCIA, end="positive", axis=1, topN=5)
 
 ## ----plot_eigen, fig.show='hide'-----------------------------------------
 plot(resMCIA$mcoa$cov2,  xlab = "pseudoeig 1", 

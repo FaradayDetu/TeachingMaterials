@@ -768,6 +768,12 @@ head(resMultiCCA$ws[[2]])
 
 \begin{frame}[fragile]\frametitle{Co-inertia: gene expression and proteins}
 
+Let us load required packages (coinertia and multiple coinertia)
+<<getcia>>=
+library(made4)
+library(omicade4)
+@
+
 <<cia, cache=TRUE>>=
 resCIA <- cia(breast_multi$RNAseq, breast_multi$RPPA)
 @
@@ -776,20 +782,51 @@ resCIA <- cia(breast_multi$RNAseq, breast_multi$RPPA)
 plot(resCIA, classvec=group, nlab=3, clab=0, cpoint=3 )
 @
 
+\end{frame}
+
+
+
+\begin{frame}[fragile]\frametitle{Co-inertia: gene expression and proteins}
+
 \begin{figure}
 \begin{center}
- \includegraphics[width=5.5cm]{figure/plot_cia-1}
+ \includegraphics[width=6cm]{figure/plot_cia-1}
 \end{center}
 \end{figure}
 
 \end{frame}
 
 
+\begin{frame}[fragile]\frametitle{Co-inertia: gene expression and proteins}
+
+Top-5 features of the first axis (positive side) can be retrieve by
+
+\footnotesize 
+<<top_features>>=
+topVar(resCIA, axis=1, topN=5, end="positive")
+@
+
+\end{frame}
+
+
+
+\begin{frame}[fragile]\frametitle{Co-inertia: gene expression and proteins}
+
+Top-5 features of the first axis (negative side) can be retrieve by
+
+\footnotesize 
+<<top_features_neg>>=
+topVar(resCIA, axis=1, topN=5, end="negative")
+@
+
+\end{frame}
+
+
+
 \begin{frame}[fragile]\frametitle{More than two tables}
 
 
 <<mcia, cache=TRUE>>=
-require(omicade4)
 resMCIA <- mcia( breast_multi[ c(1,3,4,5,6,7) ] )
 @
 
@@ -800,9 +837,8 @@ plot(resMCIA, axes=1:2, sample.lab=FALSE, sample.legend=FALSE,
      df.color=c("cyan", "magenta", "red4", "brown","yellow", "orange"),
      df.pch=2:7)
 @
-
-
 \end{frame}
+
 
 \begin{frame}[fragile]\frametitle{More than two tables}
 
@@ -812,8 +848,20 @@ plot(resMCIA, axes=1:2, sample.lab=FALSE, sample.legend=FALSE,
 \end{center}
 \end{figure}
 
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{More than two tables}
+
+Top-5 features of the first axis (positive side) can be retrieve by
+
+\scriptsize 
+<<top_features_m>>=
+topVar(resMCIA, end="positive", axis=1, topN=5)
+@
 
 \end{frame}
+
+
 
 \begin{frame}[fragile]\frametitle{More than two tables}
 
