@@ -41,7 +41,7 @@ redistribute it, do so under the same license.
 - Content: Part I:Introduction to Bioconductor; Part II: Handling omic data (SnpMatrix, ExpressionSet, GenomicRanges, SummarizedExperiment and MultiDataSet)
 - Original repository: https://github.com/isglobal-brge/TeachingMaterials/tree/master/BioC
 
-## BioC
+## Multiomic data analysis
 
 - Description: 2-hour lecture introducing multiomic data analysis
 - Author: [Juan R Gonzalez](https://github.com/isglobal-brge/)
