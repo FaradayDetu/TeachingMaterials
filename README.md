@@ -41,6 +41,15 @@ redistribute it, do so under the same license.
 - Content: Part I:Introduction to Bioconductor; Part II: Handling omic data (SnpMatrix, ExpressionSet, GenomicRanges, SummarizedExperiment and MultiDataSet)
 - Original repository: https://github.com/isglobal-brge/TeachingMaterials/tree/master/BioC
 
+
+## MultiDataSet
+
+- Description: 1-hour lecture introducing MultiDataSets (MDS) objects
+- Author: Carlos Ruiz and [Juan R Gonzalez](https://github.com/isglobal-brge/)
+- Content: Design and structure of MDS objects, creating MDS, subsetting MDS, omic data integration using MDS, profiling 
+- Original repository: https://github.com/isglobal-brge/TeachingMaterials/tree/master/MultiDataSets
+
+
 ## Multiomic data analysis
 
 - Description: 2-hour lecture introducing multiomic data analysis
