@@ -1,6 +1,6 @@
 # R course and Reproducible research with R markdown
 
-This is the material corresponding to the lectures for the classes given on 20, 22, 27 and 29 October. They are prepared to learn R and create resproducible documents using Markdown
+This is the material corresponding to the lectures for the classes given on 20, 22, 27 and 29 October of Data Visualization and Modelling course from Master in Modelling for Science and Engineering, UAB. They are prepared to learn R and create resproducible documents using Markdown
 
 ## License
  
@@ -22,7 +22,7 @@ redistribute it, do so under the same license.
 - The folder R_course contains the slides describing how to use Rstudio ngitudinal_data_analysis
 
 
-## BioC
+## Reproducible Research
 
 - Description: 2-hour lecture introducing Bioconductor
 - Author: [Juan R Gonzalez](https://github.com/isglobal-brge/)
@@ -30,24 +30,4 @@ redistribute it, do so under the same license.
 - Original repository: https://github.com/isglobal-brge/TeachingMaterials/tree/master/BioC
 
 
-## MultiDataSet
-
-- Description: 1-hour lecture introducing MultiDataSets (MDS) objects
-- Author: Carlos Ruiz and [Juan R Gonzalez](https://github.com/isglobal-brge/)
-- Content: Design and structure of MDS objects, creating MDS, subsetting MDS, omic data integration using MDS, profiling 
-- Original repository: https://github.com/isglobal-brge/TeachingMaterials/tree/master/MultiDataSets
-
-
-## Multiomic data analysis
-
-- Description: 2-hour lecture introducing multiomic data analysis
-- Author: [Juan R Gonzalez](https://github.com/isglobal-brge/)
-- Content: Genomic variation analysis, domain knowledge-guided approach, dimensionality reduction (PCA, MCIA, multiCCA)
-- Original repository: https://github.com/isglobal-brge/TeachingMaterials/tree/master/Multiomic_data_analysis
-
-## Genetic association studies
-
-- Description: Lectures given at Master in Bioinformatics (UAB) and Master of Omic data analysis (UVic)
-- Author: [Juan R Gonzalez](https://github.com/isglobal-brge/)
-- Content: Single association analysis, haplotype analysis, GWAS, post-GWAS
-- Original repository:
+# Homework 
