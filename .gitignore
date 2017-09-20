@@ -17,6 +17,8 @@ Bioconductor_intro_files
 *.aux
 *.out
 *.zip
+*.xml
+*.thmx
 Multiomic_data_analysis/cache
 Multiomic_data_analysis/figures
 Multiomic_data_analysis/figure
