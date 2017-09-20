@@ -1,6 +1,6 @@
 # R course and Reproducible research with R markdown
 
-This is the material corresponding to the lectures for the classes given on 20, 22, 27 and 29 October of Data Visualization and Modelling course from Master in Modelling for Science and Engineering, UAB. They are prepared to learn R and create resproducible documents using Markdown
+This is the material corresponding to the lectures for the classes given on 20, 22, 27 and 29 October of Data Visualization and Modelling course from Master in Modelling for Science and Engineering, UAB. They are prepared to learn R and create reproducible documents using Markdown.
 
 ## License
  
@@ -12,14 +12,14 @@ redistribute it, do so under the same license.
 
 # List of Materials
 
-- Description: A 8-hours R and mardown course
-- Author: [Juan R Gonzalez](https://github.com/isglobal-brge/), 
-- Content: Part I: R course; Part II: Reproducible research;
+- Description: A 8-hours R and Mardown course
+- Author: [Juan R Gonzalez](https://github.com/isglobal-brge/) 
+- Content: Part I: R course; Part II: Reproducible research
 
 
 ## R course
 
-- The folder **R_course** contains the slides describing how to use Rstudio as well as an introduction to R. There is another pdf file summarizing the main feaures of R. The slides are organized by blocks. After each block several tasks are proposed. These tasks consists on a simple problem to assess whether the student has understood the R code previously explained. These tasks have to be delivered (see Homework section). 
+- The folder **R_course** contains the slides describing how to use Rstudio as well as an introduction to R. There is another pdf file summarizing the main feaures of R. The slides are organized by blocks. After each block several tasks are proposed. These tasks consist on simple problems that will be used to assess whether the student has understood the R code previously explained. These tasks have to be delivered (see 'Homework and deliveries' section). 
 
 
 ## Reproducible Research
@@ -32,7 +32,7 @@ redistribute it, do so under the same license.
 
 - **TASK 2:** The folder **Exercise_markdown** contains a pdf describing the final exercise to be delivered. 
 
-Answers of both exercises (.R file and .Rmd file, respectively) must be sent to \email{juanr.gonzalez@isglobal.org} before:
+Answers of both exercises (.R file and .Rmd file, respectively) must be sent to \texttt{juanr.gonzalez@isglobal.org} before:
 
-- **TASK 1** 1st October 12:00pm
-- **TASK 2** 8th October 12:00pm
+- **TASK 1:** 1st October 12:00pm
+- **TASK 2:** 8th October 12:00pm
