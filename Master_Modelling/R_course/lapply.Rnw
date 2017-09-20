@@ -1,0 +1,78 @@
+\documentclass[10pt,xcolor=dvipsnames]{beamer}
+\setbeamertemplate{navigation symbols}{}
+
+
+
+\usepackage{color}
+%\usepackage{CREAL_slides}
+\usepackage[latin1]{inputenc} 
+
+\SweaveOpts{keep.source=TRUE}
+\setkeys{Gin}{width=0.6\textwidth}
+
+\title[Itroduction to {\tt R} - Data Visualization and Modelling]{\Large{Data Visualization and Modelling} \\ Part 1: Introduction to {\tt R} \\ \small{in \\ Master 
+in Modelling for Science and Engineering, UAB}}
+\author[Juan R Gonzalez]{Juan R Gonzalez \\ (\href{mailto:jrgonzalez@creal.cat}{jrgonzalez@creal.cat})}
+\institute[CREAL - UAB]{Center for Research in Environmental Epidemiology (CREAL) \\ Department of Mathematics, Universidad Autónoma de Barcelona (UAB) }
+
+\begin{document}
+                            
+<<setup, echo=FALSE>>=
+options(width = 80)
+@ 
+
+
+\begin{frame}[fragile]\frametitle{apply, lapply, sapply}
+However, the use of \texttt{for} structures is not the optimal option in \texttt{R}. There is a set of functions, called \texttt{apply}, that optimise the 
+computation time when repeat a calculation in a vector, list, matrix or \texttt{data.frame}:
+\begin{center}
+    \texttt{apply(vector, way, function)}
+\end{center}
+
+\medskip
+
+\texttt{apply} is a function requiring three arguments. The first one must be a matrix or \texttt{data.frame} object, the second one indicates
+wheather computation will be performed by rows (1) or by columns (2). The third 
+argument indicates the function to be applied. Extra arguments from that function can be passed through other arguments.
+\end{frame}
+
+
+\begin{frame}[fragile]\frametitle{\texttt{apply}, lapply, sapply}
+Let's illustrate how to use \texttt{apply} in a simple case. Let's imagine we have a matrix:
+<<ap1>>=
+rmatrix <- matrix(rexp(200, rate=.1), ncol=20)
+dim(rmatrix)
+@
+To get the mean of each row we can do:
+<<ap2>>=
+apply(rmatrix, 1, mean)
+@
+And to get the mean of each column:
+<<ap2>>=
+apply(rmatrix, 2, mean)
+@
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{apply, \texttt{lapply}, \texttt{sapply}}
+The same idea applies for  \texttt{lapply} and \texttt{sapply} in the case of 
+analyzing list or vectors, respectively. 
+
+\medskip
+
+\texttt{lapply} applies a function to each element
+of a list (NOTE: a {\tt data.frame} can also be seen as a list) and returns a list:
+<<ap3>>=
+lapply(c(1,2,3), function(x){ return(x*2) })
+@
+The same works for \texttt{sapply}, but returning a vector:
+<<ap4>>=
+sapply(c(1,2,3), function(x){ return(x*2) })
+@
+\end{frame}
+
+
+
+
+
+\end{document}
+
