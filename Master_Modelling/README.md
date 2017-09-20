@@ -19,15 +19,20 @@ redistribute it, do so under the same license.
 
 ## R course
 
-- The folder R_course contains the slides describing how to use Rstudio ngitudinal_data_analysis
+- The folder **R_course** contains the slides describing how to use Rstudio as well as an introduction to R. There is another pdf file summarizing the main feaures of R. The slides are organized by blocks. After each block several tasks are proposed. These tasks consists on a simple problem to assess whether the student has understood the R code previously explained. These tasks have to be delivered (see Homework section). 
 
 
 ## Reproducible Research
 
-- Description: 2-hour lecture introducing Bioconductor
-- Author: [Juan R Gonzalez](https://github.com/isglobal-brge/)
-- Content: Part I:Introduction to Bioconductor; Part II: Handling omic data (SnpMatrix, ExpressionSet, GenomicRanges, SummarizedExperiment and MultiDataSet)
-- Original repository: https://github.com/isglobal-brge/TeachingMaterials/tree/master/BioC
+- The folder **Reproducible_research** contains a pdf that describes how to combine R code in a html or pdf file. It uses _knitr_ that is also introduced.
 
+# Homework and deliveries
 
-# Homework 
+- **TASK 1:** The slides located in **R_course** folder have some exercises that must be delivered. The student has to write an script with the R code used to address each question. It is not necessary to copy the statement, just use # to comment the number of the question. 
+
+- **TASK 2:** The folder **Exercise_markdown** contains a pdf describing the final exercise to be delivered. 
+
+Answers of both exercises (.R file and .Rmd file, respectively) must be sent to \email{juanr.gonzalez@isglobal.org} before:
+
+- **TASK 1** 1st October 12:00pm
+- **TASK 2** 8th October 12:00pm
