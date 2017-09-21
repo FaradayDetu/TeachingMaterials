@@ -32,7 +32,7 @@ redistribute it, do so under the same license.
 
 - **TASK 2:** The folder **Exercise_markdown** contains a pdf describing the final exercise to be delivered. 
 
-Answers of both exercises (.R file and .Rmd file, respectively) must be sent to \texttt{juanr.gonzalez@isglobal.org} before:
+Answers of both exercises (.R file for the first task and the pdf generated from the .Rmd file, respectively) must be sent to \texttt{juanr.gonzalez@isglobal.org} before:
 
 - **TASK 1:** 1st October 12:00pm
 - **TASK 2:** 8th October 12:00pm
