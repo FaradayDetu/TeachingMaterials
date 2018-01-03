@@ -1,4 +1,4 @@
-# Biotools in biostatistics and bioinformatics
+# Creating Shiny Apps for biostatisticians and bioinformaticians
 
 Repository with the material corresponding to the course __Creating Shiny Apps for biostatisticians and bioinformaticians__ given at 
 [ISGlobal](http://www.isglobal.org) (former CREAL). Each folder contains slides, R code, data and exercises of each topic.
