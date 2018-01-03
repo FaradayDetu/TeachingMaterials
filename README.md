@@ -19,7 +19,15 @@ redistribute it, do so under the same license.
 
 # List of Materials
 
-## Course on Biotools in biostatistics and bioinformatics
+## Course: Creating Shiny Apps for biostatisticians and bioinformaticians
+
+- Description: A 2-day course given at ISGlobal 
+- Organizer: [Juan R Gonzalez](https://github.com/isglobal-brge/)
+- Lecturer: Isaac Subirana
+- Content: Part I: Introduction and first examples. Part II: Form elements: panels, buttons, drop-down lists, ... Part III: Shiny functioning. Part IV: Improving apps functionality and aspect. Part V: Advanced aspects.
+- Original Repository: https://github.com/isglobal-brge/TeachingMaterials/tree/master/Shiny
+
+## Course: Biotools in biostatistics and bioinformatics
 
 - Description: A 3-day course given at ISGlobal 
 - Author: [Juan R Gonzalez](https://github.com/isglobal-brge/), Cales Hernandez-Ferrer and Isaac Subirana
