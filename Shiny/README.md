@@ -34,7 +34,7 @@ Mañanas: de 9:00 a 13:30h / Tardes: de 15:00 a 18:00h
 
 **Día 1:**
 - Parte I (1 hora) -  Introducción de Shiny y primeros ejemplos.
-- Parte II (2 horas) - Disposición de los elementos del formulario: paneles, botones, desplegables,...
+- Parte II (2 horas) - Disposición de los elementos del formulario: paneles, botones, desplegables, etc.
 - Parte III (2 horas) - Funcionamiento de Shiny.
 - Ejercicios (1'5 horas)
 
@@ -67,11 +67,11 @@ runExample("01_hello")
 El curso utilizará como herramienta principal Rstudio. Todos los alumnos deberán tener instalado una semana antes del curso la última version de [R](https://cloud.r-project.org/) y de [Rstudio](https://www.rstudio.com/products/rstudio/download/). Durante esa semana anterior al curso, se enviará unas instrucciones para que todos los alumnos tengan una misma configuración y puedan seguir las clases de forma eficiente.
 
 # Organización del curso
-El curso está organizado por el Grupo de Bioinformática en Epidemiología Genética (BRGE) (http://brge.isglobal.org) del ISGlobal liderado por Juan R González que ha organizado varias ediciones de cursos similares al que aquí se presenta entre los que destacan la realización de 14 ediciones del curso sobre análisis de datos en estudios de asociación genética o 4 ediciones de cómo crear librerías en R entre otros.
+El curso está organizado por el Grupo de Bioinformática en Epidemiología Genética [BRGE](http://brge.isglobal.org) del ISGlobal liderado por Juan R González que ha organizado varias ediciones de cursos similares al que aquí se presenta entre los que destacan la realización de 14 ediciones del curso sobre análisis de datos en estudios de asociación genética o 4 ediciones de cómo crear librerías en R entre otros.
 
 # Profesorado
 
-Isaac Subirana es licenciado en "Ciencias y Técnicas Estadísticas" por la Universitat Politècnica de Catalunya (UPC) y Doctorado en "Estadística" por la Universitat de Barcelona (UB). Desde el 2007, trabaja como profesor asociado en el Departamento de Estadística de la Facultad de Biología de la UB. Además, es Técnico Investigador en el campo de la Epidemiología Cardiovascular en el grupo REGICOR del "Parque de Investigación Biomédica de Barcelona" (PRBB) desde el 2003. Es el creador y responsable del paquete compareGroups de R (www.comparegroups.eu) para el que se implementó una aplicación diseñada a partir de las herramientas de Shiny.
+Isaac Subirana es licenciado en "Ciencias y Técnicas Estadísticas" por la Universitat Politècnica de Catalunya (UPC) y Doctorado en "Estadística" por la Universitat de Barcelona (UB). Desde el 2007, trabaja como profesor asociado en el Departamento de Estadística de la Facultad de Biología de la UB. Además, es Técnico Investigador en el campo de la Epidemiología Cardiovascular en el grupo REGICOR del "Parque de Investigación Biomédica de Barcelona" (PRBB) desde el 2003. Es el creador y responsable del paquete [compareGroups](www.comparegroups.eu) de R para el que se implementó una aplicación diseñada a partir de las herramientas de Shiny.
 
 
 # Coste del curso y forma de pago
