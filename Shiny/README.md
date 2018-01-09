@@ -24,7 +24,7 @@ Estudiantes, profesores e investigadores que utilizan R en su trabajo diario, co
 El curso será eminentemente práctico. La temática se irá introduciendo mediante ejemplos. Al final de cada bloque (cada 2 o 3 horas) se propondrá un ejercicio que los alumnos deberán resolver en clase. A lo largo del curso, se irán discutiendo los ejemplos modificando alguno de ellos y dando posibles alternativas para que se asimilen mejor los conceptos. Los alumnos dispondrán de las diapositivas del curso así como el código utilizado tanto en la presentación como para resolver los ejercicios. 
 
 # Fechas y horario
-Las fechas del curso son el 13 y 14 de febrero y se realizará en el Instituto de Salud Global Barcelona-Campus Mar (ISGlobal) (www.creal.cat) [antiguo CREAL] situado en el Parque de Investigación Biomédica de Barcelona (www.prbb.org ). El número de plazas para el curso está limitado a 20 y las plazas se adjudicarán ESTRICTAMENTE por orden de llegada de pre-inscripción, rellenando el [formulario de pre-inscripción]( https://docs.google.com/forms/d/e/1FAIpQLSeY0v5l7gbze0CEBlR5gx33A69dyk7uNk4KJZxcE8DtXje-Gw/viewform?usp=sf_link) 
+Las fechas del curso son el 13 y 14 de febrero y se realizará en el Instituto de Salud Global Barcelona-Campus Mar (ISGlobal) (www.creal.cat) [antiguo CREAL] situado en el Parque de Investigación Biomédica de Barcelona (www.prbb.org ). El número de plazas para el curso está limitado a 20 y las plazas se adjudicarán ESTRICTAMENTE por orden de llegada de pre-inscripción, rellenando el [formulario de pre-inscripción](https://docs.google.com/forms/d/e/1FAIpQLSfP7UdNb9dlz7DKbTnIbLS56fuai0U1HuNJaNenUeslFV1O3w/viewform?c=0&w=1) 
 
 El horario del curso es el siguiente:
 Mañanas: de 9:00 a 13:30h / Tardes: de 15:00 a 18:00h
