@@ -75,7 +75,7 @@ Isaac Subirana es licenciado en "Ciencias y Técnicas Estadísticas" por la Univer
 
 
 # Coste del curso y forma de pago
-El coste del curso es de 290??? que incluye el desayuno que se realizará a mitad de la mañana, así como todo el material del curso en soporte electrónico (funciones, librerías y ejercicios resueltos) las diapositivas y material bibliográfico presentado en las clases.  Los socios del BIB tendrán un descuento del 10% pero sólo a los dos primeros miembros que lo soliciten. El resto si quieren asistir al curso deberán abonar el coste total del curso.
+El coste del curso es de 290 euros que incluye el desayuno que se realizará a mitad de la mañana, así como todo el material del curso en soporte electrónico (funciones, librerías y ejercicios resueltos) las diapositivas y material bibliográfico presentado en las clases.  Los socios del BIB tendrán un descuento del 10% pero sólo a los dos primeros miembros que lo soliciten. El resto si quieren asistir al curso deberán abonar el coste total del curso.
 
 Una vez sea confirmada la inscripción al curso se deberá realizar el pago a través de transferencia bancaria, al número de cuenta CAIXABANK, S.A número ES79 2100 0801 1102 0052 1586. Una vez realizado el ingreso el alumno tendrá que enviar el comprobante de la transferencia a gemma.punyet@isglobal.org.
 
