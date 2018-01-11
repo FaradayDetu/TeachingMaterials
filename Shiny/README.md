@@ -80,7 +80,7 @@ El coste del curso es de 290 euros que incluye el desayuno que se realizará a mi
 Una vez sea confirmada la inscripción al curso se deberá realizar el pago a través de transferencia bancaria, al número de cuenta CAIXABANK, S.A número ES79 2100 0801 1102 0052 1586. Una vez realizado el ingreso el alumno tendrá que enviar el comprobante de la transferencia a gemma.punyet@isglobal.org.
 
 
-# Acceso al Campus Mar - ISGlobal (PRBB) 
+# Acceso a ISGlobal - Campus Mar (PRBB)
 El Instituto de Salud Global Barcelona (ISGlobal) se encuentra en el Parque de Investigación Biomédica de Barcelona (PRBB) situado en la calle Doctor Aiguader, 88 de Barcelona, en la primera planta del PRBB, delante del Paseo Marítimo de Barcelona, entre el Hospital del Mar y el Hotel Arts de la Villa Olímpica. 
 
  ![PRBB localization](figures/prbb_loc.png)
