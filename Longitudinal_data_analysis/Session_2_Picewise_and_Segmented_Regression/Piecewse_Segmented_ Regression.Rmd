@@ -32,9 +32,9 @@ opts_chunk$set(message = FALSE, error = TRUE, warning = TRUE)
 
 # Picewise regression
 
-Piecewise regression comes about when you have ‘breakpoints’, where there are clearly two different linear relationships in the data with a sudden, sharp change in directionality. This crops up occasionally in biomedicine when dealing with, for example, cholesterol level and fat or calories intake. There is initially a rapid incress of cholesterol level as fat or calories consumption increases (cholesterol incressing becomes limiting at certain levels).
+Piecewise regression comes about when you have `breakpoints`, where there are clearly two different linear relationships in the data with a sudden, sharp change in directionality. This crops up occasionally in biomedicine when dealing with, for example, cholesterol level and fat or calories intake. There is initially a rapid incress of cholesterol level as fat or calories consumption increases (cholesterol incressing becomes limiting at certain levels).
 
-If you Google ‘R piecewise regression’, you may get a variety of methods and advice on how to run a piecewise regression. Essentially, you can do it manually or use different `R` packages to run the regression. Herein, we will review two methods: brute force iterative approaches (as in ‘The R Book’ by Crawley that can help to better understand the process of how to fit the models) and the `segmented` package. Using these approaches allows you to statistically estimate the breakpoint, which is better than just eyeballing it and fitting two models around what you think is the breakpoint. As we always comment on class, let statistics do the work for you objectively.
+If you Google `R piecewise regression`, you may get a variety of methods and advice on how to run a piecewise regression. Essentially, you can do it manually or use different `R` packages to run the regression. Herein, we will review two methods: brute force iterative approaches (as in `The R Book` by Crawley that can help to better understand the process of how to fit the models) and the `segmented` package. Using these approaches allows you to statistically estimate the breakpoint, which is better than just eyeballing it and fitting two models around what you think is the breakpoint. As we always comment on class, let statistics do the work for you objectively.
 
 
 Let us start by illustrating the need for using a piecewise approach to our linear regression model. Consider the following plot of the calories intake and the cholesterol level:
@@ -82,7 +82,7 @@ For illustrating purposes and for the sake of the simplicity, let us illustrate 
 breaks <- with(cholesterol, calories[which(calories >= 2850 & calories <= 2950)])
 ```
 
-Now we’re going to iteratively search these breakpoints for the model that has the lowest residual MSE, using that as our criteria for the best model. Create an empty container for MSE values from each model, and use an iteration to run a linear regression for each possible breakpoint. Formulate the linear model exactly like the above formula.
+Now we are going to iteratively search these breakpoints for the model that has the lowest residual MSE, using that as our criteria for the best model. Create an empty container for MSE values from each model, and use an iteration to run a linear regression for each possible breakpoint. Formulate the linear model exactly like the above formula.
 
 ```{r, mse}
 mse <- numeric(length(breaks))
@@ -172,18 +172,17 @@ Further information about the `segmented regression` can be found in this paper 
 
 Data for exercises are in the repository https://github.com/isglobal-brge/TeachingMaterials/tree/master/Longitudinal_data_analysis/data
 
-**Exercise 1:** Read the paper [Estimating regression models with unknown break-points](http://onlinelibrary.wiley.com/doi/10.1002/sim.1545/pdf) and answer these questions:
+**Exercise 1:** Read the paper [Estimating regression models with unknown break-points](http://onlinelibrary.wiley.com/doi/10.1002/sim.1545/pdf) (http://onlinelibrary.wiley.com/doi/10.1002/sim.1545/pdf) and answer these questions:
 
 * Can this method detect the existence of a change point?
 * What are the main limitations of this method in practice? Enumerate a couple of them
-* Figure 4 (bottom left) there are a longitudinal data where x-axis represents age and y-axis stands for the logit of having bronquitis. How many changes would you estimate to evaluate the relationship between the years of exposition and the probability of developing bronquitis? How many does the autor test? How may does he consider should be analyzed? Why does he conclude that (read pages 3067 and 3068).
+* In the Figure 4 (bottom left) of the paper there is an example of longitudinal data where x-axis represents age and y-axis stands for the logit of having bronquitis. How many changes would you estimate to evaluate the relationship between the years of exposition and the probability of developing bronquitis? How many changes did the autor test? How many changes should the author be considered? Why does he conclude that (read pages 3067 and 3068).
 
-**Exercise 2:** By using the `cholesterol` dataset I have used in this material (that is available at the folder of data for exercises) repeat the iterative searching procedure to better estimate the point of change. Explain what have you changed in the code and why. 
-
+**Exercise 2:** By using the `cholesterol` dataset I have used in this material (this dataset is available in the folder of data for exercises) repeat the iterative searching procedure to better estimate the point of change. Explain the changes you have performed in the code and why. 
 
 **Exercise 3:** The funcion `slope` in the `segmented` package contains an argument that is called `APC` that can be used for estimating the annual percentage change of the segments. Use data available at `mamaCat.txt` to perform a joinpoint regression analysis by using `segmented` regression and estimate the APC of each segment. Remember that the data contains breast cancer mortality of females in Catalonia of the period 1975-1997. Each column contains the next variables: gender, year of mortality, number of deaths and at-risk population. NOTE: investigate whether `segmented` regression allows the use of different models than `lm`.
 
-**Exercise 4:** [**Segmented regression adjusted by other covariates**]. Researchers have performed an experiment by collecting data of plants in three different organs accross time. They are interested in determining the time when these organs stop growing (or even become small). NOTE: this is important since it implies that they are looking for a single change point - observe that researches have their own scientific question and you must know how to translate it into a statistical one. Data are available in the obejct `plant` that is in the `segmented` library (you can load them by using _data(plant)_ ). The organ is in the variable `group`. Perform the statistical analysis that is required to address researchers' question. Do not forget to create a plot tu visually evaluate the evolution accross time for each type of plant. Write up a little conclusion about the study (3-4 lines as much).
+**Exercise 4:** [**Segmented regression adjusted by other covariates**]. Researchers have performed an experiment by collecting data of plants in three different organs accross time. They are interested in determining the time when these organs stop growing (or even become smaller). NOTE: this is important since it implies that they are looking for a single change point - observe that researches have their own scientific question and you must know how to translate it into a statistical one. Data are available in the obejct `plant` that is in the `segmented` library (you can load them by using _data(plant)_ ). The organ is in the variable `group`. Perform the statistical analysis that is required to address researchers' question. Do not forget to create a plot tu visually evaluate the evolution accross time for each type of plant. Write up a little conclusion about the study (3-4 lines as much).
 
 ---------------------
  
