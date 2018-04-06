@@ -2,10 +2,10 @@
 title: "Recurrent events with `R` (Part III) - Frailty models"
 author: "Juan R Gonzalez"
 output:
-  BiocStyle::html_document:
-    toc_depth: 2
   BiocStyle::pdf_document:
     fig_caption: yes
+    toc_depth: 2
+  BiocStyle::html_document:
     toc_depth: 2
 ---
 
@@ -76,13 +76,13 @@ Here, we observe as the frailty is highly significant and that the variance of t
 $$ \mbox{H}_0: \xi=0$$
 by using, for instance, a z-score test. Later on, we will see how to carried out this test by using a penalized version of the full likelihood. 
 
-We can also fit this model assuming another distrution of fraities. The `frailty()` function has an argument called `distribution` that can be change to _gaussian_ or _t_. For instance
+We can also fit this model assuming another distrution of frailties. The `frailty()` function has an argument called `distribution` that can be change to _gaussian_ or _t_. For instance
 
 ```{r, frailty_normal}
 coxph(Surv(time, event) ~ sex + frailty(id, dist="gaussian"), 
       data = readmission)
 ```
-We can observe that both methods lead with the same conclusions, altouhg modelling data with _gaussian_ function gets less significant results. 
+We can observe that both methods lead with the same conclusions, altough modelling data with _gaussian_ function gets less significant results. 
 
 ## Penalized full likelihood
 
@@ -134,7 +134,13 @@ where $\lambda_0(\cdot)$ is an unknown baseline hazard rate function, $\rho(\cdo
 
 As showed by [Pena and Hollander]() and [Pena, Slate and Gonzalez](), this class of models subsumes many existing ones. For example the PWP conditional model, considering no stratification, can be formulated to address either time since a patient entered the study or time since the last occurrence. Both cases corresponds to (\ref{conditional hazard_PHol}) with $\rho(k;\alpha)=1$, $Z_i=1, i=1,\ldots,n$, and $\mathcal{E}_i(t)=t$ or $\mathcal{E}_i(t)=t - t_{k-1}$, respectively. The counting process formulation, $\mathcal{E}_i(t)=t$, assumes that all interventions produce no improvement in the patient, that is, the disease is proceeding in a stable manner. Conversely, the gap time formulation, $\mathcal{E}_i(t)=t - t_{k-1}$, considers that all interventions lead to a complete remission of the disease. On the other hand, [Andersen and Gill]() (AG model) can be seen as a special case of PHol model taking $\rho(k;\alpha) = 1$, $Z=1$ and gap time formulation as the effective age. We consider the risk for the \emph{k}th recurrence under the common underlying hazard, $\lambda_0(t)$  among those patients who are under observation at the time \emph{t}.
 
-We can fit the parameters for the general class of models by using the package `gcmrec`. The data frame used in the fit must contain the variables subject identification, time to inter-occurrence, and censored status (coded 1: event, 0:censored). Furthermore, we can have some covariates. Other arguments in this function are: `effageData` (list containing the information about effective age), `s` (a selected calendar time that normally is considered the maximum observed follow-up time), `rhoFunc` (A character string specifying the effects attributable to the accumulating event occurrences $\rho(k:\alpha)$, the default is "alpha to k"), `typeEffage` (effective age function, possible values are  "perfect" or "minimal" for perfect repair model or minimal repair model, respectively.  We can fit minimal or perfect repair models, with and without frailties. The model without frailties and minimal repair (e.g calendar time scale) is fitted by:
+We can fit the parameters for the general class of models by using the package `gcmrec` that can be installed into R by typing:
+
+```{r install_gcmrec, eval=FALSE}
+devtools::install_github("isglobal-brge/gcmrec")
+```
+
+The dataframe used in the fit must contain the variables subject identification, time to inter-occurrence, and censored status (coded 1: event, 0:censored). Furthermore, we can have some covariates. Other arguments in this function are: `effageData` (list containing the information about effective age), `s` (a selected calendar time that normally is considered the maximum observed follow-up time), `rhoFunc` (A character string specifying the effects attributable to the accumulating event occurrences $\rho(k:\alpha)$, the default is "alpha to k"), `typeEffage` (effective age function, possible values are  "perfect" or "minimal" for perfect repair model or minimal repair model, respectively.  We can fit minimal or perfect repair models, with and without frailties. The model without frailties and minimal repair (e.g calendar time scale) is fitted by:
 
 ```{r, gcmrec minimal}
 library(gcmrec)
@@ -178,7 +184,7 @@ We observe tha Alpha is lower than 1. This indicates that the probability of hav
 
 # Recommended lectures
 
-In the GitHub folder there are several papers further describing how to estimate frailty models using {\tt frailtypack} {\tt R} package. It also contains the paper describing the general class of models for cancer data where the effect of intervertions is introduced. The manual for estimating any extension of the Cox model for dealing with complex survival data (file Frailty_Models_update_Rondeau_Marouzi_Gonzalez.pdf) is also available
+In the GitHub folder (and in the Campus Virtual) there are two papers describing how to estimate frailty models using _frailtypack_ _R_ package. It also contains the paper describing the general class of models for cancer data where the effect of intervertions is introduced that is highly recommended to be read. 
 
 
 \clearpage
@@ -229,7 +235,7 @@ Repeat previous analyses (except the model in 5.) by using {\tt frailtypack} lib
 
 - The [`frailtypack`] package (https://cran.r-project.org/web/packages/frailtypack/)
 
-- The [`gcmrec`] package (https://cran.r-project.org/web/packages/gcmrec/)
+- The [`gcmrec`] package (https://github.com/isglobal-brge/gcmrec)
 
 - Gail, M., Santner, T., and Brown, C. (1980). An analysis of comparative carcinogenesis experiments based on multiple times to tumor. Biometrics, 36:255-266.
 
