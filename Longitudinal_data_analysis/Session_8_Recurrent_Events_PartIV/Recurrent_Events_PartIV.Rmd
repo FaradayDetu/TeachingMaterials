@@ -2,10 +2,10 @@
 title: "Recurrent events with `R` (Part IV) - Joint models"
 author: "Juan R Gonzalez"
 output:
-  BiocStyle::html_document:
-    toc_depth: 2
   BiocStyle::pdf_document:
     fig_caption: yes
+    toc_depth: 2
+  BiocStyle::html_document:
     toc_depth: 2
 ---
 
@@ -104,7 +104,7 @@ In the GitHub folder corresponding to this lecture there is a paper describing h
 
 ---------------------
 
-The folder `https://github.com/isglobal-brge/TeachingMaterials/tree/master/Longitudinal_data_analysis/data` contains the `copd.txt` file encoding hospital readmission of patients diagnosed with chronic obstructive pulmonary disease (COPD). The researchers are interested in studing the effect of physical activity (variable _phys.act_) with regard to the probability of being hospital readmitted (variables _time.readmission_ and _status.readmission_. They know that pulmonary capacity (variable _fev_), smoking (variable _smoke_) and age (variable _age_) also affect the likelihood of coming back to the hospital. In addition, they also have information about the terminal event (variables _time.death_ and _status.death_). 
+The folder `https://github.com/isglobal-brge/TeachingMaterials/tree/master/Longitudinal_data_analysis/data` contains the `copd_recurrent.txt` file encoding hospital readmission of patients diagnosed with chronic obstructive pulmonary disease (COPD). The variable _id_ encodes the unique patient identificator (to be used for clustering the data). The researchers are interested in studing the effect of physical activity (variable _phys.act_) with regard to the probability of being hospital readmitted (variables _time.readmission_ and _status.readmission_. They know that pulmonary capacity (variable _fev_), smoking (variable _smoke_) and age (variable _age_) also affect the likelihood of coming back to the hospital. In addition, they also have information about the terminal event (variables _time.death_ and _status.death_). 
 
 
 **Exercise:** 
