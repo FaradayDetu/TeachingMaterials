@@ -155,11 +155,13 @@ In these type of models there is a very relevant measurement. We are normally in
 
 In the dosage-response studies where the effect of a drug is studied, this value is know as the *median dosage* and it provides the value of the dosage where half of the inviduals die. This is know as $IC_{50}$ value.
 
-It can be estimated as $-\hat{\theta_3}/\hat{\theta_2}$. In our case 
+It can be estimated as $-\hat{\theta_2}/\hat{\theta_3}$. In our case 
 
 ```{r, ic50}
--coef(mod.nl)[3]/coef(mod.nl)[2]
+-coef(mod.nl)[2]/coef(mod.nl)[3]
 ```
+
+that can be interpreted as the year where the population will reach its maximum value. Notice that this value would indicate the moment where half of population is still alive when analyzing mortality models.
 
 The standard error of IC50 can be estimated by means of the delta method. NOTE: for teh univariate case this corresponds to $\mbox{Var}(g(\theta_1)) = \sigma^2_{\theta_1} g'(\theta_1)^2$. However this cannot be applied in our case since IC50 is computed by using $\theta_2$ and $\theta_3$. In `R` the delta method can be computed by
 
