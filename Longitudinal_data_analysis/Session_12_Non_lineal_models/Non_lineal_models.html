@@ -151,8 +151,8 @@ or just call make
 <div id="introduction-1" class="section level1">
 <h1><span class="header-section-number">2</span> Introduction</h1>
 <ul>
-<li><p>Non lineal models generalize linear regression models when the mean conditioned to the response variable is a non lineal function on the parameters. Los modelos no lineales son una generalizaci?n del modelo lineal de regresi?n en los que la media condicionada de la variable respuesta, no es una funci?n lineal de los par?meros</p></li>
-<li><p>In some situations, it is enough to transform either the outcome or the predictors and use lineal models</p></li>
+<li><p>Non lineal models generalize linear regression models when the mean conditioned to the response variable is a non lineal function on the parameters.</p></li>
+<li><p>In some situations, it is enough to transform either the outcome or the predictors and use lineal models.</p></li>
 <li><p>This approach works in many situation. However, the problem arises when interpreting model parameters.</p></li>
 <li><p>Therefore, if our aim is to determine those variable that are associated with the outcome, this approach is a good option. On the other hand, is our aim is to interpret model parameters, non lineal methods have to be used instead.</p></li>
 </ul>
@@ -333,16 +333,16 @@ summary(mod.ss)</code></pre>
                 data.frame(country=&quot;Canada&quot;, CanPop)))
 some(datos)</code></pre>
 <pre><code>##     country year population
-## 3        US 1810   7.239881
-## 11       US 1890  62.979766
-## 12       US 1900  76.212168
-## 16       US 1940 132.164569
-## 17       US 1950 151.325798
-## 19       US 1970 203.302031
-## 61   Canada 1901   5.371000
-## 91   Canada 1931  10.377000
-## 101  Canada 1941  11.507000
-## 111  Canada 1951  13.648000</code></pre>
+## 5        US 1830   12.86070
+## 7        US 1850   23.19188
+## 11       US 1890   62.97977
+## 18       US 1960  179.32317
+## 20       US 1980  226.54220
+## 22       US 2000  281.42191
+## 23   Canada 1861    3.23000
+## 51   Canada 1891    4.83300
+## 81   Canada 1921    8.78800
+## 141  Canada 1981   23.77400</code></pre>
 <p>We can visualize the data as following (NOTE: lines are estimated using non parametric methods)</p>
 <pre class="r"><code>scatterplot(population ~ year|country, data=datos, 
       box=FALSE,  reg=FALSE)</code></pre>
