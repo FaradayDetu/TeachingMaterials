@@ -32,11 +32,8 @@ opts_chunk$set(message = FALSE, error = TRUE, warning = FALSE)
 # Introduction
 
 - Non lineal models generalize linear regression models when the mean conditioned to the response variable is a non lineal function on the parameters.
-Los modelos no lineales son una generalizaci?n del modelo lineal de regresi?n
-en los que la media condicionada de la variable respuesta, no es una funci?n lineal de 
-los par?meros
 
-- In some situations, it is enough to transform either the outcome or the predictors and use lineal models
+- In some situations, it is enough to transform either the outcome or the predictors and use lineal models.
 
 - This approach works in many situation. However, the problem arises when interpreting model parameters. 
 
