@@ -32,9 +32,9 @@ opts_chunk$set(message = FALSE, error = TRUE, warning = FALSE)
 # Introduction
 
 - Non lineal models generalize linear regression models when the mean conditioned to the response variable is a non lineal function on the parameters.
-Los modelos no lineales son una generalización del modelo lineal de regresión
-en los que la media condicionada de la variable respuesta, no es una función lineal de 
-los parámeros
+Los modelos no lineales son una generalizaci?n del modelo lineal de regresi?n
+en los que la media condicionada de la variable respuesta, no es una funci?n lineal de 
+los par?meros
 
 - In some situations, it is enough to transform either the outcome or the predictors and use lineal models
 
@@ -272,9 +272,9 @@ deltaMethod(phis, "US.phi2 - Canada.phi2", vcov=var)
 
 **Exercise 1:** 
 
-In biochemistry, the kinetic model of Michaelis-Menten is used to analyzed enzyme kinetics. This model relates the rate reaction $v$ with the sustrate concentration $S$ by means of the next equation:
+In biochemistry, the kinetic model of Michaelis-Menten is used to analyzed enzyme kinetics. This model relates the rate reaction $v$ with the sustrate concentration $S$ by means of the equation:
 
-$$ v = \frac{\phi_1}{\phi_2 + S} $$
+$$ v = \frac{\phi_1 S}{\phi_2 + S} $$
 
 where $\phi_1$ corresponds to the maximum reaction rate achieved by the system (saturating value) and $\phi_2$ (known as Michaelis constant) corresponds to the concentration where reaction rate is half of $\phi_1$. This parameter $\phi_2$ is highly relevant to the biologists. 
 
@@ -286,7 +286,7 @@ where $\phi_1$ corresponds to the maximum reaction rate achieved by the system (
 
 The file `ic50.txt` contains information about cellular growth accross time (variable _tiempo_) of three different exposures (variables _low_, _medium_, _high_).
 
-- Create a plot comparin the three growth curves
+- Create a plot comparing the three growth curves
 
 - Calculate  the _ic50_ (time at which half of the maximum cellular grotwh is achieved) for the three types of exposure by using the model you think that best approximate the data. Is there statistically significant differences between those values?
 
