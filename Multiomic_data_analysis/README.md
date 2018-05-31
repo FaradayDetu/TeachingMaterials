@@ -19,7 +19,5 @@ Install required packages (copy & paste this code into R console):
 # Necessary to install packages from Bioconductor
 source("https://bioconductor.org/biocLite.R")
 
-install.packages(c("haploR", "mediation")
-
-biocLite(c("made4", "omicade4", ))
+biocLite(c("haploR", "mediation", "made4", "omicade4"))
 ```
