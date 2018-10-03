@@ -25,9 +25,17 @@ redistribute it, do so under the same license.
 
 - The folder **Reproducible_research** contains a pdf that describes how to combine R code in a html or pdf file. It uses _knitr_ that is also introduced.
 
-### tidyverse
+## tidyverse
 
 - The folder **tidyverse** contains the slides and R code to perform data wrangling, data transformation and data visualization using tidyverse. It also contains slides describing how to perform genomic data visualization using Gviz and bigviz. 
+
+## data
+
+- The folder **data** contains datasets used in the illustrative examples as well as those datasets required for the exercises
+
+## R
+
+- The folder **R** contains the R code used in the illustrative examples
 
 # Homework and deliveries
 
