@@ -31,4 +31,4 @@ redistribute it, do so under the same license.
 
 # Homework and deliveries
 
-- Tasks are described in the slides. The answers must be uploaded into Campus Virtual. For those of you who do not have access to it, the PDFs can be sent by email to:  \texttt{juanr.gonzalez@isglobal.org}
+- Tasks are described in the slides. The answers must be uploaded into Campus Virtual. For those of you who do not have access to it, the PDFs can be sent by email to: juanr.gonzalez@isglobal.org
