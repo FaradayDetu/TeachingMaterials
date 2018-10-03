@@ -188,7 +188,7 @@ mod.gee.indep <- gee(score ~ group + time,
 
 Un modelo autoregresivo
 
-<<correlacion, results=hide>>=
+<<correlacion2, results=hide>>=
 mod.gee.AR <- gee(score ~ group + time, 
                   data = datos, id = id,
                   family = gaussian, 
