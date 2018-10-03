@@ -31,11 +31,4 @@ redistribute it, do so under the same license.
 
 # Homework and deliveries
 
-- **TASK 1:** The slides located in **R_course** folder have some exercises that must be delivered. The student has to write an script with the R code used to address each question. It is not necessary to copy the statement, just use # to comment the number of the question. 
-
-- **TASK 2:** The folder **Exercise_markdown** contains a pdf describing the final exercise to be delivered. 
-
-Answers of both exercises (.R file for the first task and the pdf generated from the .Rmd file, respectively) must be sent to \texttt{juanr.gonzalez@isglobal.org} before:
-
-- **TASK 1:** 1st October 12:00pm
-- **TASK 2:** 8th October 12:00pm
+- Tasks are described in the slides. The answers must be uploaded into Campus Virtual. For those of you who do not have access to it, the PDFs can be sent by email to:  \texttt{juanr.gonzalez@isglobal.org}
